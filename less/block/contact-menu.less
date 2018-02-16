@@ -1,0 +1,21 @@
+.contact-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+
+  &__link {
+    display: block;
+    margin-bottom: 10px;
+    color: @gray-light;
+    transition: @transition-time;
+
+    &:hover {
+      color: @color-pp;
+    }
+  }
+
+  @media(min-width: @screen-lg) {
+    display: none;
+  }
+}

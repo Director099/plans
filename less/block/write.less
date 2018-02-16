@@ -1,0 +1,31 @@
+.write {
+  max-width: 210px;
+  margin: 0 auto 25px;
+
+  &__tagline {
+    .tagline-h2();
+
+    @media(min-width: @screen-lg) {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    .font-h2();
+
+    @media(min-width: @screen-lg) {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media(min-width: @screen-sm) {
+    max-width: 535px;
+    margin-bottom: 0;
+    margin-top: 25px;
+  }
+
+  @media(min-width: @screen-lg) {
+    margin-top: 0px;
+  }
+}

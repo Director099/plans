@@ -1,0 +1,47 @@
+.about {
+  background-image: url("img/bg-patern.jpg");
+  background-size: cover;
+  background-color: @gray-darker-2;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  .padding-ident();
+
+  &__container {
+    .container();
+  }
+
+  &__title {
+    .font-h2();
+    color: @white;
+  }
+
+  &__title-h3 {
+    .font-h2();
+    color: @white;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  &__tagline {
+    .tagline-h2();
+    color: @white;
+  }
+
+  &__row {
+    .row();
+    margin-top: 40px;
+  }
+
+  &__column-text {
+    .col(lg, 4);
+    color: @white;
+  }
+
+  &__column-photo {
+    .col(lg, 8);
+    color: @white;
+    margin-left: auto;
+  }
+}

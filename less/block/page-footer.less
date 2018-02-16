@@ -1,0 +1,33 @@
+.page-footer {
+  background: @gray-darkest;
+  color: @white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__container {
+    .container();
+  }
+
+  &__row {
+    .row();
+    align-items: center;
+    flex-direction: column-reverse;
+
+    @media(min-width: @screen-sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__column {
+    .col(sm, 6);
+    .col(lg, 4);
+
+    &--hidden {
+      display: none !important;
+
+      @media(min-width: @screen-lg) {
+        display: block !important;
+      }
+    }
+  }
+}

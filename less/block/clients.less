@@ -1,0 +1,45 @@
+.clients {
+  background-image: url("img/bg-pattern.jpg");
+  background-size: cover;
+  // background-color: @gray-darker-2;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  // .padding-ident();
+  padding-bottom: 45px;
+  padding-top: 45px;
+  overflow: hidden;
+
+  &__container {
+    .container();
+
+    @media(min-width: @screen-xl) {
+      max-width: 1360px;
+    }
+  }
+
+  &__tagline {
+    .tagline-h2();
+  }
+
+  &__title {
+    .font-h2();
+  }
+
+  &__title-h3 {
+    .font-h3();
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: @font-size--small-2;
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

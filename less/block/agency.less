@@ -1,0 +1,42 @@
+.agency {
+  .container();
+  margin-bottom: 20px;
+  margin-top: 45px;
+  text-align: center;
+
+  &__text {
+    text-transform: uppercase;
+    color: @gray;
+    font-size: @font-size--small;
+    letter-spacing: 2px;
+
+    @media(min-width: @screen-md) {
+      margin-left: 5px;
+    }
+  }
+
+  &__soc-network {
+    display: inline-block;
+    font-size: 0;
+    margin-right: 15px;
+
+    .icon {
+      fill: @gray-darker-2;
+      transition: @transition-time;
+
+      &:hover {
+        fill: @color-pp;
+      }
+    }
+  }
+
+  @media(min-width: @screen-md) {
+    margin-top: 100px;
+    text-align: left;
+  }
+
+  @media(min-width: @screen-lg) {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}

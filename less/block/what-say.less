@@ -1,0 +1,61 @@
+.what-say {
+  background-image: url("img/bg-patern.jpg");
+  background-size: cover;
+  // background-color: @gray-darker-2;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: @white;
+  overflow: hidden;
+  .padding-ident();
+      padding-bottom: 105px;
+
+  &__container {
+    .container();
+  }
+
+  &__title {
+    .font-h2();
+    color: @white;
+  }
+
+  &__title-h3 {
+    .font-h3();
+    text-align: left;
+
+    @media(min-width: @screen-lg) {
+      text-align: right;
+    }
+  }
+
+  &__tagline {
+    .tagline-h2();
+    color: @white;
+  }
+
+  &__row {
+    .row();
+    margin-top: 60px;
+
+    @media(min-width: @screen-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__column {
+    .col(lg, 4, 11);
+    margin-left: auto;
+
+    p {
+      font-size: @font-size--small-2;
+
+      @media(min-width: @screen-lg) {
+        text-align: right;
+      }
+    }
+
+    @media(min-width: @screen-lg) {
+      order: 2;
+    }
+  }
+}

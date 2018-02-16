@@ -1,0 +1,61 @@
+.form-send {
+  margin-bottom: 15px;
+  width: 100%;
+
+  &__text {
+    display: block;
+    color: #929292;
+    margin-bottom: 10px;
+    font-size: @font-size--small;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @media(min-width: @screen-sm) {
+      text-align: left;
+    }
+  }
+
+  &__rel {
+    position: relative;
+  }
+
+  &__control {
+    max-width: 200px;
+    width: 100%;
+    padding: 14px 15px 14px 15px;
+    color: @white;
+    box-shadow: 0 0 10px 1px fade(@black, 20%);
+    border-radius: 50px;
+    border: none;
+    font-weight: 300;
+    background: @gray-darker-2;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    width: 43px;
+    height: 43px;
+    border-radius: 50px;
+    border: none;
+    background: @color-pp;
+
+    .icon {
+      margin-left: 5px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 17px 2px rgba(255,68,18,.85);
+      outline: none;
+    }
+  }
+
+  @media(min-width: @screen-sm) {
+    width: auto;
+    margin-bottom: 0;
+  }
+}

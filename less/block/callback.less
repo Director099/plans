@@ -1,0 +1,41 @@
+.callback {
+  background: #fafafa url("img/footer-bg-mb.jpg") no-repeat left bottom;
+  // .padding-ident();
+  overflow: hidden;
+  padding-bottom: 75px;
+  padding-top: 50px;
+
+  &__container {
+    .container();
+  }
+
+  &__row {
+    .row(0, 0, 0, 150px, 150px, 150px);
+    flex-direction: column-reverse;
+
+    @media(min-width: @screen-sm) {
+      flex-direction: row;
+    }
+  }
+
+  &__column {
+    .col(lg, 6, 12, 150px);
+  }
+
+  &__tagline {
+    margin-bottom: 5px;
+  }
+
+  @media(min-width: @screen-md) {
+    background: #fafafa url("img/footer-bg-tb.jpg") no-repeat bottom;
+  }
+
+  @media(min-width: @screen-lg) {
+    background-image: url("img/footer-bg.jpg");
+    // background-attachment: fixed;
+    background-size: cover;
+    background-color: #fafafa;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

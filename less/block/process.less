@@ -1,0 +1,20 @@
+.process {
+  .padding-ident();
+  background: url("img/bg-patern.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__container {
+    .container();
+  }
+
+  &__column {
+    .col(lg, 9);
+    margin-left: auto;
+    color: @white;
+  }
+
+  &__video {
+    .mokap-video();
+  }
+}

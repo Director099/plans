@@ -1,0 +1,30 @@
+.form-call {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__control {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid @gray-darker-2;
+    background: transparent;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 15px;
+    color: @white;
+    background: @gray-darkest;
+
+    @media(min-width: @screen-sm) {
+      margin-top: 0;
+      margin-left: 15px;
+    }
+  }
+
+  @media(min-width: @screen-sm) {
+    flex-wrap: nowrap;
+  }
+}

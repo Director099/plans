@@ -1,0 +1,94 @@
+.font-body() {
+  font: 300 12px "Proxima Nova", "Arial", sans-serif;
+
+  @media(min-width: @screen-md) {
+    font: 300 14px "Proxima Nova", "Arial", sans-serif;
+  }
+}
+
+.font-h1() {
+  font: 900 24px "Proxima Nova", "Arial", sans-serif;
+
+  span {
+    font-family: "Playfair Display", "Arial", sans-serif;
+    font-weight: 700;
+  }
+
+  @media(min-width: @screen-md) {
+    font: 900 36px "Proxima Nova", "Arial", sans-serif;
+  }
+}
+
+.font-h2() {
+  font: 900 18px "Proxima Nova", "Arial", sans-serif;
+  text-align: center;
+  margin-top: 0;
+
+  span {
+    font-family: "Playfair Display", "Arial", sans-serif;
+    font-weight: 700;
+  }
+
+  @media(min-width: @screen-md) {
+    font: 900 27px/37px "Proxima Nova", "Arial", sans-serif;
+  }
+}
+
+.font-h3() {
+  font: 700 14px "Proxima Nova", "Arial", sans-serif;
+  text-align: center;
+  margin-top: 0;
+
+  span {
+    font-family: "Playfair Display", "Arial", sans-serif;
+    font-weight: 700;
+  }
+
+  @media(min-width: @screen-md) {
+    font: 700 21px/28px "Proxima Nova", "Arial", sans-serif;
+  }
+}
+
+.font-strong() {
+  font: 700 10px "Proxima Nova", "Arial", sans-serif;
+
+  @media(min-width: @screen-md) {
+    font: 700 14px "Proxima Nova", "Arial", sans-serif;
+  }
+}
+
+.font-nav() {
+  font: 700 24px/50px "Proxima Nova", "Arial", sans-serif;
+
+  @media(min-width: @screen-md) {
+    font: 700 38px/75px "Proxima Nova", "Arial", sans-serif;
+  }
+
+  @media(min-width: @screen-lg) {
+    font: 700 14px/34px "Proxima Nova", "Arial", sans-serif;
+  }
+}
+
+.mokap-video() {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 20px 5px fade(@black, 20%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tagline-h2() {
+  font-size: 9px;
+  text-align: center;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.padding-ident() {
+  @pt: 75px;
+  // @pt: 50px;
+  padding-bottom: @pt;
+  padding-top: @pt;
+}

@@ -1,0 +1,62 @@
+.projects {
+  background-image: url("img/bg-pattern.jpg");
+  background-size: cover;
+  // background-color: @gray-darker-2;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .padding-ident();
+
+  &__container {
+    .container();
+  }
+
+  &__tagline {
+    .tagline-h2();
+  }
+
+  &__title {
+    .font-h2();
+  }
+
+  &__filter {
+    display: none;
+
+    @media(min-width: @screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: space-around;
+      // max-width: 650px;
+      list-style-type: none;
+      // margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    margin-right: 10px;
+
+    a {
+      display: block;
+      font-size: @font-size--small;
+      padding: 10px 25px;
+      text-decoration: none;
+      color: @gray;
+      letter-spacing: 2px;
+      border-radius: 50px;
+      border: 1px solid transparent;
+      transition: @transition-time;
+      text-transform: uppercase;
+
+      &.active {
+        border: 1px solid @black;
+        color: @black;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

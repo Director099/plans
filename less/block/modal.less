@@ -1,0 +1,83 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+  opacity: 0;
+  transition: opacity .15s linear;
+
+  .modal-dialog {
+    position: relative;
+    max-width: 325px;
+    margin: 1.175rem auto 20px;
+    padding: 35px;
+    background: @white;
+    border-radius: @border-radius;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
+    transform: translate(0,-25%);
+    transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+
+    &__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: @white;
+      border: none;
+      outline: none;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: @font-size--small;
+      margin-bottom: 15px;
+    }
+
+    &__offer {
+      max-width: 200px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: @font-size--small;
+      letter-spacing: 1.5px;
+
+      a {
+        position: relative;
+        display: inline-block;
+        color: @gray-darkest-2;
+        font-weight: 700;
+        text-decoration: none;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: @gray-lighter;
+          height: 1px;
+        }
+      }
+    }
+  }
+
+  &.show {
+    opacity: 1;
+
+    .modal-dialog {
+      transform: translate(0, 0);
+    }
+  }
+}

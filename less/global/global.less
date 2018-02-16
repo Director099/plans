@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  .font-body();
+  color: @text-color;
+}
+
+a {
+  color: @color-link;
+  cursor: pointer;
+  transition: @transition-time;
+
+  &:hover {
+    text-decoration: none;
+    color: @color-link--hover;
+  }
+}
+
+button {
+  transition: @transition-time;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+input {
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  letter-spacing: 1px;
+}
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 13px 15px;
+  color: @white;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: none;
+
+  &--brif {
+    max-width: 250px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid @white;
+
+    @media(min-width: @screen-lg) {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 17px 2px rgba(255,68,18,.85);
+      color: @color-pp;
+      border: 1px solid @color-pp;
+    }
+  }
+
+  &--pp {
+    padding: 13px 60px 13px 25px;
+    background: @color-pp url("img/strelka.png") no-repeat 88%;
+    border: none;
+
+    &:hover {
+      box-shadow: 0 0 17px 2px rgba(255,68,18,.85);
+      color: @white;
+    }
+  }
+
+  &--more {
+    display: block;
+    margin: 50px auto 0;
+    border: 1px solid @black;
+    color: @black;
+    font-size: @font-size--small;
+    background: transparent;
+  }
+}
+
+.btn-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 0;
+  transform: translateX(-50%) translateY(-50%);
+  background: @color-pp;
+  z-index: 9;
+  outline: none;
+  border: none;
+  opacity: 1;
+  transition: @transition-time;
+  box-shadow: 0 0 5px 5px fade(@black, 20%);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-25%) translateY(-50%);
+    border: 7px solid transparent;
+    border-left: 10px solid @white;
+  }
+
+  &--close {
+    opacity: 0;
+  }
+}
+

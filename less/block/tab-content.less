@@ -1,0 +1,16 @@
+.tab-content > {
+
+  .active {
+    display: block !important;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  .tab-pane {
+    display: none;
+    opacity: 0;
+    transition: @transition-time;
+  }
+}

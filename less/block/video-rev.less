@@ -1,0 +1,201 @@
+.video-rev {
+  position: relative;
+  // margin-left: -50%;
+  margin-left: -43%;
+    //   display: block;
+    // flex: 0 0 41.66666667%;
+    // max-width: 41.66666667%;
+    // padding-left: 15px;
+    // padding-right: 15px;
+
+  &__item {
+    position: relative;
+    max-width: 270px;
+    padding: 0 15px;
+    max-height: 200px;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: relative;
+    transition: @transition-time;
+    cursor: pointer;
+    opacity: 0.4;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid @white;
+      transition: @transition-time;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-20%) translateY(-50%);
+      border: 5px solid transparent;
+      border-left: 7px solid @white;
+      transition: @transition-time;
+      z-index: 1;
+    }
+
+    &:hover {
+
+      &::after {
+        background: @color-pp;
+        border: 1px solid @color-pp;
+        box-shadow: 0 0 3px 3px fade(@black, 35%)
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: @font-size--small-2;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: @font-size--small;
+    line-height: 15px;
+    letter-spacing: 2px;
+    color: @gray;
+  }
+
+  &__slider {
+
+    // .owl-item.active .video-rev__img {
+    //   opacity: 0.4 !important;
+    // }
+
+    .owl-item.active.custom-act .video-rev__img {
+      opacity: 1 !important;
+    }
+
+    .owl-nav {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      max-width: 180px;
+      margin-left: auto;
+      margin-right: 30px;
+      margin-top: 20px;
+
+      .owl-prev,
+      .owl-next {
+        position: relative;
+        width: 40px;
+        // height: 40px;
+        background: transparent;
+        font-size: 0;
+        border-radius: 0;
+        transition: @transition-time;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 50%;
+          height: 1.5px;
+          background: #999;
+          transition: @transition-time;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0px;
+          transform: translateY(-50%);
+          border: 3px solid transparent;
+          border-left: 7px solid #999;
+          transition: @transition-time;
+        }
+
+        &.disabled {
+          opacity: 1;
+        }
+
+        &:hover {
+          background: transparent;
+
+          &::after {
+            background: @color-pp;
+          }
+
+          &::before {
+            border-left: 7px solid @color-pp;
+          }
+        }
+      }
+
+      .owl-next::before {
+        left: 5px;
+        right: inherit;
+        transform: translateX(-50%) translateY(-50%) rotate(180deg);
+      }
+    }
+
+    .owl-dots {
+      position: absolute;
+      right: 15px;
+      bottom: 20px;
+      max-width: 135px;
+      width: 100%;
+      margin: 0;
+      color: #fff;
+
+      .owl-dot {
+        position: absolute;
+        align-items: center;
+        left: 0px;
+        top: 0px;
+        opacity: 0;
+        display: flex;
+
+        &.active {
+          font-size: 18px;
+          opacity: 1;
+
+          .max-number {
+            background: transparent;
+          }
+        }
+
+        b {
+          font: 700 24px "GothamPro", "Arial", sans-serif;
+          color: @color-pp;
+          margin-right: 5px;
+        }
+
+        .max-number {
+          width: auto !important;
+          height: auto !important;
+          margin: 5px 0 0 0;
+          background: transparent;
+          font-size: 14px;
+          color: @gray;
+          font: 400 14px "GothamPro", "Arial", sans-serif;
+        }
+      }
+    }
+  }
+
+  @media(min-width: @screen-lg) {
+    order: 1;
+  }
+}

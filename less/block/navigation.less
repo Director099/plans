@@ -1,0 +1,26 @@
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  // overflow-y: auto;
+
+  a {
+    text-decoration: none;
+    color: @white;
+    transition: @transition-time;
+    .font-nav();
+
+    &:hover {
+      color: @color-pp;
+    }
+
+    @media(min-width: @screen-lg) {
+      padding: 10px 15px;
+    }
+  }
+
+  @media(min-width: @screen-lg) {
+    display: flex;
+  }
+}

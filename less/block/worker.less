@@ -1,0 +1,115 @@
+.worker {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 320px;
+  margin: 0 auto;
+  // transform: translateX(15%);
+
+  &__img {
+    position: relative;
+    width: 120px;
+    // margin-bottom: -30px;
+    // margin-right: 90px;
+    // margin-right: 20px;
+    // margin-left: 20px;
+    margin: 0 10px -40px;
+    filter: grayscale(100%);
+    transition: 1s;
+
+    // &:first-child {
+    //   margin-left: 120px;
+    // }
+
+    // &:last-child {
+    //   margin-left: 120px;
+    // }
+
+    &:nth-child(3n+1) {
+      margin: 0 40px -40px;
+
+      @media(min-width: @screen-sm) {
+        margin: 0px 75px -40px;
+      }
+
+      @media(min-width: @screen-md) {
+        margin: inherit;
+      }
+
+      @media(min-width: @screen-xl) {
+        margin: 0 auto;
+      }
+    }
+
+    @media(min-width: @screen-sm) {
+      width: auto;
+      margin: 0px 0px -40px;
+    }
+
+    @media(min-width: @screen-md) {
+      margin: 0;
+
+      &:first-child {
+        margin-left: 110px;
+        margin-right: 60px;
+      }
+
+      &:last-child {
+        margin-left: 110px;
+        margin-right: 20px;
+      }
+    }
+
+    @media(min-width: @screen-xl) {
+      margin: 0;
+
+      &:first-child {
+        margin-left: 110px;
+        margin-right: 60px;
+      }
+
+      &:last-child {
+        margin-left: 110px;
+        margin-right: 20px;
+      }
+    }
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @media(min-width: @screen-sm) {
+      display: block;
+      position: absolute;
+      bottom: 25px;
+      left: 70px;
+      width: 153px;
+      text-transform: uppercase;
+      color: @gray;
+      font-size: 7px;
+      line-height: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media(min-width: @screen-sm) {
+    max-width: 455px;
+    justify-content: space-around;
+  }
+
+  @media(min-width: @screen-md) {
+    max-width: 580px;
+    justify-content: inherit;
+  }
+
+  @media(min-width: @screen-xl) {
+    margin-left: auto;
+    margin-right: initial;
+  }
+}
