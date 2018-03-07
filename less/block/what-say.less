@@ -23,7 +23,7 @@
     .font-h3();
     text-align: left;
 
-    @media(min-width: @screen-lg) {
+    @media(min-width: @screen-md) {
       text-align: right;
     }
   }
@@ -43,18 +43,18 @@
   }
 
   &__column {
-    .col(lg, 4, 11);
+    .col(md, 4, 11);
     margin-left: auto;
 
     p {
       font-size: @font-size--small-2;
 
-      @media(min-width: @screen-lg) {
+      @media(min-width: @screen-md) {
         text-align: right;
       }
     }
 
-    @media(min-width: @screen-lg) {
+    @media(min-width: @screen-md) {
       order: 2;
     }
   }

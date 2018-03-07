@@ -1,17 +1,38 @@
 .btn-group {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   margin-top: 25px;
 
   &__link {
     color: @white;
     font-size: @font-size--small-2;
+    margin-bottom: 20px;
 
     &:hover {
       color: @color-pp;
       text-decoration: underline;
+    }
+
+    @media(min-width: @screen-xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--lg {
+    @media(min-width: @screen-xl) {
+      display: none;
+    }
+  }
+
+  &--xl {
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    @media(min-width: @screen-xl) {
+      display: flex;
     }
   }
 

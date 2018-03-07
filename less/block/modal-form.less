@@ -10,6 +10,51 @@
     margin-bottom: 15px;
   }
 
+  &__checkbox {
+
+    input {
+      display: none;
+
+      &:checked ~ label::before {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: -2px;
+        width: 4px;
+        height: 9px;
+        border-right: 1px solid @black;
+        border-bottom: 1px solid @black;
+        transform: rotate(45deg);
+        box-shadow: 2px 0 0 0 transparent, inset -2px 0 0 0 transparent;
+        z-index: 2;
+      }
+    }
+
+    label {
+      position: relative;
+      display: block;
+      font-size: @font-size--small;
+      padding-left: 15px;
+      margin-top: 15px;
+
+      a {
+        color: @color-pp;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: @border-radius;
+        border: 1px solid @black;
+      }
+    }
+  }
+
   .btn {
     width: 100%;
   }

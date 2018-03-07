@@ -1,8 +1,15 @@
 .form-call {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+
+
+  &__block {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+     @media(min-width: @screen-sm) {
+      flex-wrap: nowrap;
+    }
+  }
 
   &__control {
     width: 100%;
@@ -10,6 +17,57 @@
     border-radius: 50px;
     border: 1px solid @gray-darker-2;
     background: transparent;
+  }
+
+  &__checkbox {
+    position: relative;
+
+    input {
+      display: none;
+
+      &:checked ~ label::before {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: -2px;
+        width: 4px;
+        height: 9px;
+        border-right: 1px solid @black;
+        border-bottom: 1px solid @black;
+        transform: rotate(45deg);
+        box-shadow: 2px 0 0 0 transparent, inset -2px 0 0 0 transparent;
+        z-index: 2;
+      }
+    }
+
+    label {
+      position: relative;
+      display: block;
+      padding-left: 15px;
+      font-size: @font-size--small;
+      margin-left: 20px;
+      margin-top: 20px;
+
+      a {
+        color: @color-pp;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: @border-radius;
+        border: 1px solid @black;
+      }
+
+      @media(min-width: @screen-sm) {
+        margin-left: 0px;
+      }
+    }
   }
 
   .btn {
@@ -24,7 +82,5 @@
     }
   }
 
-  @media(min-width: @screen-sm) {
-    flex-wrap: nowrap;
-  }
+
 }

@@ -3,6 +3,24 @@
   max-width: 580px;
   margin: 60px auto 0;
 
+  &__none {
+    display: none;
+
+    &:checked ~ label::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: -2px;
+      width: 4px;
+      height: 9px;
+      border-right: 1px solid @white;
+      border-bottom: 1px solid @white;
+      transform: rotate(45deg);
+      box-shadow: 2px 0 0 0 transparent, inset -2px 0 0 0 transparent;
+      z-index: 2;
+    }
+  }
+
   &__group {
     .col(sm, 6);
     margin-bottom: 15px;
@@ -13,6 +31,32 @@
 
       @media(min-width: @screen-md) {
         margin-bottom: 30px;
+      }
+    }
+
+    label {
+      position: relative;
+      display: block;
+      padding-left: 15px;
+      font-size: @font-size--small;
+      color: @white;
+      max-width: 260px;
+      margin: 0 auto;
+
+      a {
+        color: @color-pp;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: @border-radius;
+        border: 1px solid @white;
       }
     }
 

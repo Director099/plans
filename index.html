@@ -4,15 +4,13 @@
       <section class="review__container">
         <p class="review__tagline">what we do?</p>
         <h2 class="review__title">Воплощаемым <span>планы</span> в реальность </h2>
-        <div class="review__img">
-          <img class="img-fluid" src="img/macbook3.png" alt="Видео" id="playpause">
+        <div class="review__img" >
+          <img class="img-fluid" src="img/mackbook(9).png" alt="Видео" id="playpause">
           <img class="review__hip-2" src="img/Hipster2.png" alt="Фотошоп">
           <img class="review__hip-1" src="img/hipster1.png" alt="Фотошоп">
           <img class="review__hip-3" src="img/hipster3.png" alt="Фотошоп">
-          <video poster="img/poster-video.png" class="review__video" id="video">
-            <source src="video/video.mp4" type="video/mp4">
-          </video>
-          <!-- <button class="btn-play">Play</button> -->
+          <video poster="img/poster-video.png" class="review__video" id="video"></video>
+          <button class="btn-play">Play</button>
         </div>
       </section>
     </div>
@@ -24,9 +22,9 @@
           <section class="doing__column">
             <h3 class="doing__title-h3">Разработка <span>сайтов</span>, которые помогают бизнесу расти и жизнь его клиентов.</h3>
             <p>Псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки вместо английского текста для того, чтобы сделать ударение не на содержание, а на элементы дизайна. Такой текст также называется как заполнитель. Это очень удобный инструмент для моделей (макетов). Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.  Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.  Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.</p>
-            <div class="btn-group">
-              <a class="btn btn--pp" data-toggle="modal" data-target="#exampleModal">Обсудить проект</a>
+            <div class="btn-group btn-group--xl">
               <a class="btn-group__link" href="#">#Разработка сайтов #Landing page</a>
+              <a class="btn btn--pp" data-toggle="modal" data-target="#exampleModal">Обсудить проект</a>
             </div>
           </section>
           <div class="services">
@@ -62,6 +60,10 @@
               </section>
             </div>
           </div>
+        </div>
+        <div class="btn-group btn-group--lg">
+          <a class="btn-group__link" href="#">#Разработка сайтов #Landing page</a>
+          <a class="btn btn--pp" data-toggle="modal" data-target="#exampleModal">Обсудить проект</a>
         </div>
       </section>
     </div>
@@ -344,35 +346,35 @@
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">Михаил петрович филипин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «barber shop» </p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
@@ -389,8 +391,14 @@
               <p class="contact__tagline">contacts</p>
               <h2 class="contact__title">Контакты</h2>
               <form class="form-call" action="#">
-                <input class="form-call__control" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __">
-                <button class="btn">Перезвоните мне</button>
+                <div class="form-call__block">
+                  <input class="form-call__control" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __">
+                  <button class="btn">Перезвоните мне</button>
+                </div>
+                <div class="form-call__checkbox">
+                  <input type="checkbox" id="check-footer" required checked>
+                  <label for="check-footer">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
               </form>
               <span class="contact__or">или</span>
               <div class="contact__row">
@@ -399,21 +407,21 @@
                   <p class="address"><strong>Тел.:</strong> <a href="tel:+79374700900">+7 (937) 470-09-00</a></p>
                   <p class="address"><strong>e-mail:</strong> <a href="mailto:info@pplans.ru">info@pplans.ru</a></p>
                 </div>
-                <div class="contact__column">
+                <div class="contact__column-5">
                   <div class="footer-soc">
                     <p class="footer-soc__text">social</p>
                     <p class="footer-soc__social">
-                      <a class="footer-soc__icon" href="#">
+                      <a class="footer-soc__icon" href="https://www.facebook.com/People-Plans-2053189688271847/">
                         <svg class="icon" width="15" height="15">
                           <use xlink:href="#facebook"/>
                         </svg>facebook
                       </a>
-                      <a class="footer-soc__icon" href="#">
+                      <a class="footer-soc__icon" href="https://www.instagram.com/peopleplans/">
                         <svg class="icon" width="15" height="15">
                           <use xlink:href="#im"/>
                         </svg>instagram
                       </a>
-                      <a class="footer-soc__icon" href="#">
+                      <a class="footer-soc__icon" href="https://vk.com/pplans">
                         <svg class="icon" width="15" height="15">
                           <use xlink:href="#vk"/>
                         </svg>vk
@@ -438,6 +446,10 @@
                 <label class="form-mess__group form-mess__group--textarea">
                   <textarea class="form-mess__control" placeholder="Сообщение" rows="4"></textarea>
                 </label>
+                <div class="form-mess__checkbox">
+                  <input type="checkbox" id="check-footer" required checked>
+                  <label for="check-footer">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
                 <button class="btn btn--pp">отправить сообщение</button>
               </form>
             </section>

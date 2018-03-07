@@ -38,9 +38,21 @@
         <form class="modal-form" action="">
           <input class="modal-form__control" type="text" placeholder="Телефон или E-mail">
           <button class="btn btn--pp">обсудить проект</button>
+          <div class="modal-form__checkbox">
+            <input type="checkbox" id="check-1" checked required>
+            <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+          </div>
         </form>
         <p class="modal-dialog__offer">Нажимая кнопку «Перезвонить мне» я даю свое согласие на обработку <a href="#">персональных данных</a></p>
       </section>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog--rev" role="document">
+      <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/m-KBu9AN4JI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
   </div>
   <div class="fullpage">
@@ -78,17 +90,17 @@
           </li>
         </ul>
         <p class="social-menu">
-          <a class="social-menu__link" href="#">
+          <a class="social-menu__link" href="https://www.facebook.com/People-Plans-2053189688271847/">
             <svg class="icon" width="15" height="15">
               <use xlink:href="#facebook"/>
             </svg>facebook
           </a>
-          <a class="social-menu__link" href="#">
+          <a class="social-menu__link" href="https://www.instagram.com/peopleplans/">
             <svg class="icon" width="15" height="15">
               <use xlink:href="#im"/>
             </svg>instagram
           </a>
-          <a class="social-menu__link" href="#">
+          <a class="social-menu__link" href="https://vk.com/pplans">
             <svg class="icon" width="15" height="15">
               <use xlink:href="#vk"/>
             </svg>vk
@@ -109,18 +121,22 @@
         <div class="main-block__column">
           <section class="title-block">
             <h1 class="title-block__title">Мы <span>занимаемся</span> разработкой сайтов и landing page.</h1>
-            <p class="title-block__tagline">Создаем фирменный cтиль и бренды, под ключ. Настраиваем рекламные компании с высоким KPI.</p>
+            <p class="title-block__tagline">Создаем фирменный cтиль и бренды, под ключ.<br> Настраиваем рекламные компании с высоким KPI.</p>
           </section>
           <div class="feedback">
             <form class="form-send" action="#">
               <label class="form-send__text" for="discussion">давайте обсудим ваш проект</label>
-              <div class="form-send__rel">
+              <div class="form-send__rel" id="visible-check">
                 <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion">
                 <button class="form-send__btn">
                   <svg class="icon" width="20" height="20">
                     <use xlink:href="#strelka"/>
                   </svg>Отправить
                 </button>
+                <div class="form-send__checkbox" id="check">
+                  <input type="checkbox" id="check-1" checked required>
+                  <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
               </div>
             </form>
             <a class="btn btn--brif" href="https://docs.google.com/forms/d/1LpVKme1BI_uZ3DeOO7UxvGv-w0FYv_43KDFVSIOixIQ/viewform?edit_requested=true" target="_blank">Заполнить бриф</a>
@@ -134,17 +150,17 @@
     <div class="agency">
       <p class="agency__text">digital agency</p>
       <p class="agency__socials">
-        <a class="agency__soc-network">
+        <a class="agency__soc-network" href="https://www.facebook.com/People-Plans-2053189688271847/">
           <svg class="icon" width="20" height="20">
             <use xlink:href="#facebook"/>
           </svg>facebook
         </a>
-        <a class="agency__soc-network">
+        <a class="agency__soc-network" href="https://www.instagram.com/peopleplans/">
           <svg class="icon" width="20" height="20">
             <use xlink:href="#im"/>
           </svg>instagram
         </a>
-        <a class="agency__soc-network">
+        <a class="agency__soc-network" href="https://vk.com/pplans">
           <svg class="icon" width="20" height="20">
             <use xlink:href="#vk"/>
           </svg>vk
@@ -159,15 +175,13 @@
       <section class="review__container">
         <p class="review__tagline">what we do?</p>
         <h2 class="review__title">Воплощаемым <span>планы</span> в реальность </h2>
-        <div class="review__img">
-          <img class="img-fluid" src="img/macbook3.png" alt="Видео" id="playpause">
+        <div class="review__img" >
+          <img class="img-fluid" src="img/mackbook(9).png" alt="Видео" id="playpause">
           <img class="review__hip-2" src="img/Hipster2.png" alt="Фотошоп">
           <img class="review__hip-1" src="img/hipster1.png" alt="Фотошоп">
           <img class="review__hip-3" src="img/hipster3.png" alt="Фотошоп">
-          <video poster="img/poster-video.png" class="review__video" id="video">
-            <source src="video/video.mp4" type="video/mp4">
-          </video>
-          <!-- <button class="btn-play">Play</button> -->
+          <video poster="img/poster-video.png" class="review__video" id="video"></video>
+          <button class="btn-play">Play</button>
         </div>
       </section>
     </div>
@@ -179,9 +193,9 @@
           <section class="doing__column">
             <h3 class="doing__title-h3">Разработка <span>сайтов</span>, которые помогают бизнесу расти и жизнь его клиентов.</h3>
             <p>Псевдо-латинский текст, который используется для веб дизайна, типографии, оборудования, и распечатки вместо английского текста для того, чтобы сделать ударение не на содержание, а на элементы дизайна. Такой текст также называется как заполнитель. Это очень удобный инструмент для моделей (макетов). Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.  Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.  Он помогает выделить визуальные элементы в документе или презентации, например текст, шрифт или разметка.</p>
-            <div class="btn-group">
-              <a class="btn btn--pp" data-toggle="modal" data-target="#exampleModal">Обсудить проект</a>
+            <div class="btn-group btn-group--xl">
               <a class="btn-group__link" href="#">#Разработка сайтов #Landing page</a>
+              <a class="btn btn--pp" data-toggle="modal" data-target="#exampleModal">Обсудить проект</a>
             </div>
           </section>
           <div class="services">
@@ -217,6 +231,10 @@
               </section>
             </div>
           </div>
+        </div>
+        <div class="btn-group btn-group--lg">
+          <a class="btn-group__link" href="#">#Разработка сайтов #Landing page</a>
+          <a class="btn btn--pp" data-toggle="modal" data-target="#exampleModal">Обсудить проект</a>
         </div>
       </section>
     </div>
@@ -499,35 +517,35 @@
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">Михаил петрович филипин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «barber shop» </p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
               <section class="video-rev__item item">
                 <h4 class="video-rev__title">иван алексеевич синицин</h4>
                 <p class="video-rev__text">Генеральный директор магазина «Бравомастер»</p>
-                <div class="video-rev__img">
+                <div class="video-rev__img" data-toggle="modal" data-target="#modal-review">
                   <img class="img-fluid" src="img/people-1.jpg" alt="Видео отзыв">
                 </div>
               </section>
@@ -544,8 +562,14 @@
               <p class="contact__tagline">contacts</p>
               <h2 class="contact__title">Контакты</h2>
               <form class="form-call" action="#">
-                <input class="form-call__control" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __">
-                <button class="btn">Перезвоните мне</button>
+                <div class="form-call__block">
+                  <input class="form-call__control" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __">
+                  <button class="btn">Перезвоните мне</button>
+                </div>
+                <div class="form-call__checkbox">
+                  <input type="checkbox" id="check-footer" required checked>
+                  <label for="check-footer">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
               </form>
               <span class="contact__or">или</span>
               <div class="contact__row">
@@ -554,21 +578,21 @@
                   <p class="address"><strong>Тел.:</strong> <a href="tel:+79374700900">+7 (937) 470-09-00</a></p>
                   <p class="address"><strong>e-mail:</strong> <a href="mailto:info@pplans.ru">info@pplans.ru</a></p>
                 </div>
-                <div class="contact__column">
+                <div class="contact__column-5">
                   <div class="footer-soc">
                     <p class="footer-soc__text">social</p>
                     <p class="footer-soc__social">
-                      <a class="footer-soc__icon" href="#">
+                      <a class="footer-soc__icon" href="https://www.facebook.com/People-Plans-2053189688271847/">
                         <svg class="icon" width="15" height="15">
                           <use xlink:href="#facebook"/>
                         </svg>facebook
                       </a>
-                      <a class="footer-soc__icon" href="#">
+                      <a class="footer-soc__icon" href="https://www.instagram.com/peopleplans/">
                         <svg class="icon" width="15" height="15">
                           <use xlink:href="#im"/>
                         </svg>instagram
                       </a>
-                      <a class="footer-soc__icon" href="#">
+                      <a class="footer-soc__icon" href="https://vk.com/pplans">
                         <svg class="icon" width="15" height="15">
                           <use xlink:href="#vk"/>
                         </svg>vk
@@ -593,6 +617,10 @@
                 <label class="form-mess__group form-mess__group--textarea">
                   <textarea class="form-mess__control" placeholder="Сообщение" rows="4"></textarea>
                 </label>
+                <div class="form-mess__checkbox">
+                  <input type="checkbox" id="check-footer" required checked>
+                  <label for="check-footer">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
                 <button class="btn btn--pp">отправить сообщение</button>
               </form>
             </section>

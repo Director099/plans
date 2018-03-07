@@ -38,9 +38,21 @@
         <form class="modal-form" action="">
           <input class="modal-form__control" type="text" placeholder="Телефон или E-mail">
           <button class="btn btn--pp">обсудить проект</button>
+          <div class="modal-form__checkbox">
+            <input type="checkbox" id="check-1" checked required>
+            <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+          </div>
         </form>
         <p class="modal-dialog__offer">Нажимая кнопку «Перезвонить мне» я даю свое согласие на обработку <a href="#">персональных данных</a></p>
       </section>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog--rev" role="document">
+      <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/m-KBu9AN4JI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
   </div>
   <div class="fullpage">
@@ -78,17 +90,17 @@
           </li>
         </ul>
         <p class="social-menu">
-          <a class="social-menu__link" href="#">
+          <a class="social-menu__link" href="https://www.facebook.com/People-Plans-2053189688271847/">
             <svg class="icon" width="15" height="15">
               <use xlink:href="#facebook"/>
             </svg>facebook
           </a>
-          <a class="social-menu__link" href="#">
+          <a class="social-menu__link" href="https://www.instagram.com/peopleplans/">
             <svg class="icon" width="15" height="15">
               <use xlink:href="#im"/>
             </svg>instagram
           </a>
-          <a class="social-menu__link" href="#">
+          <a class="social-menu__link" href="https://vk.com/pplans">
             <svg class="icon" width="15" height="15">
               <use xlink:href="#vk"/>
             </svg>vk
@@ -109,18 +121,22 @@
         <div class="main-block__column">
           <section class="title-block">
             <h1 class="title-block__title">Мы <span>занимаемся</span> разработкой сайтов и landing page.</h1>
-            <p class="title-block__tagline">Создаем фирменный cтиль и бренды, под ключ. Настраиваем рекламные компании с высоким KPI.</p>
+            <p class="title-block__tagline">Создаем фирменный cтиль и бренды, под ключ.<br> Настраиваем рекламные компании с высоким KPI.</p>
           </section>
           <div class="feedback">
             <form class="form-send" action="#">
               <label class="form-send__text" for="discussion">давайте обсудим ваш проект</label>
-              <div class="form-send__rel">
+              <div class="form-send__rel" id="visible-check">
                 <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion">
                 <button class="form-send__btn">
                   <svg class="icon" width="20" height="20">
                     <use xlink:href="#strelka"/>
                   </svg>Отправить
                 </button>
+                <div class="form-send__checkbox" id="check">
+                  <input type="checkbox" id="check-1" checked required>
+                  <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
               </div>
             </form>
             <a class="btn btn--brif" href="https://docs.google.com/forms/d/1LpVKme1BI_uZ3DeOO7UxvGv-w0FYv_43KDFVSIOixIQ/viewform?edit_requested=true" target="_blank">Заполнить бриф</a>
@@ -134,17 +150,17 @@
     <div class="agency">
       <p class="agency__text">digital agency</p>
       <p class="agency__socials">
-        <a class="agency__soc-network">
+        <a class="agency__soc-network" href="https://www.facebook.com/People-Plans-2053189688271847/">
           <svg class="icon" width="20" height="20">
             <use xlink:href="#facebook"/>
           </svg>facebook
         </a>
-        <a class="agency__soc-network">
+        <a class="agency__soc-network" href="https://www.instagram.com/peopleplans/">
           <svg class="icon" width="20" height="20">
             <use xlink:href="#im"/>
           </svg>instagram
         </a>
-        <a class="agency__soc-network">
+        <a class="agency__soc-network" href="https://vk.com/pplans">
           <svg class="icon" width="20" height="20">
             <use xlink:href="#vk"/>
           </svg>vk
@@ -167,7 +183,11 @@
           </section>
         </div>
         <div class="task__video">
-          <img class="img-fluid" src="img/macbook-white.png" alt="Мокап">
+          <img class="img-fluid" src="img/mackbook(9).png" alt="Мокап">
+          <video poster="img/poster-video.png" class="task__video-play" id="video">
+            <source src="video/video.mp4" type="video/mp4">
+          </video>
+          <button class="btn-play">Play</button>
         </div>
       </div>
     </div>
@@ -207,6 +227,7 @@
           <img class="img-fluid" src="img/process.jpg" alt="мокап">
         </div>
         <div class="design__column">
+          <a class="design__link-project" href="#">EVENAILLOUNGE.RU</a>
           <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
         </div>
       </div>
@@ -226,6 +247,10 @@
         <label class="form-quest__group form-quest__group--textarea">
           <textarea class="form-quest__control" placeholder="Сообщение" rows="4"></textarea>
         </label>
+        <div class="form-quest__group form-quest__group--textarea">
+          <input class="form-quest__none" type="checkbox" id="check-2" required checked>
+          <label for="check-2">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+        </div>
         <div class="choice">
           <p class="choice__call">
             <span class="choice__text">Или позвоните нам:</span>

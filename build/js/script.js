@@ -290,13 +290,16 @@ $('.services__slider').owlCarousel({
   responsive: {
     0: {
       items: 1,
+      loop: true,
       center: true
     },
     610: {
+      loop: true,
       items: 1
     },
     768: {
       margin: 0,
+      loop: true,
       items: 1
     },
 
@@ -340,11 +343,17 @@ $('.video-rev__slider').owlCarousel({
   nav: true,
   responsive: {
     0: {
+      rtl:true,
+      margin: 15,
+      loop: true,
       items: 1,
       center: true
     },
-    610: {
-      items: 1
+    480: {
+      rtl:true,
+      loop: true,
+      autoWidth: true,
+      center: true
     },
     768: {
       rtl:true,
@@ -394,7 +403,7 @@ $(function () {
     });
 });
 
-$('#phone').mask('0 (000) 000 00 00');
+$('#phone').mask('0 (000) 000 - 00 - 00');
 
 (function(){
 
@@ -446,8 +455,6 @@ $('#phone').mask('0 (000) 000 00 00');
       document.body.style.overflow = 'auto';
     }
   });
-
-
 })();
 
 $(document).ready(function(){
@@ -455,24 +462,60 @@ $(document).ready(function(){
     video: $("#video"),
     playpause: $("#playpause"),
     btn: $(".btn-play")
+
   };
 
   var video = controls.video[0];
 
-  controls.playpause.click(function(){
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-
+  function videoPlay() {
     controls.btn.toggleClass("btn-play--close");
 
-    if (controls.btn.hasClass("btn-play--close")) {
+    if (video.paused || controls.btn.hasClass("btn-play--close")) {
+      video.play();
       controls.btn.css("z-index", "-1");
     } else {
+      video.pause();
       controls.btn.css("z-index", "9");
     }
+  }
+
+  controls.playpause.click(function(){
+    videoPlay();
+  });
+
+  controls.btn.click(function(){
+    videoPlay();
   });
 });
+
+(function() {
+  var playpause = document.querySelector('#playpause');
+  var video = document.querySelector('#video');
+  var btnPlay = document.querySelector('.btn-play');
+
+  function playVideo(elem) {
+    elem.addEventListener('click', function() {
+      video.innerHTML = '<source src="video/video.mp4" type="video/mp4">';
+    })
+  }
+
+  playVideo(playpause);
+  playVideo(btnPlay);
+
+})();
+
+(function() {
+  var blockCheckbox = document.querySelector('#visible-check');
+  var check = document.querySelector('#check');
+  var discutionInput = document.querySelector('#discussion');
+
+  discutionInput.addEventListener('input', function() {
+    if (this.value) {
+      check.classList.add('active')
+    } else {
+      check.classList.remove('active')
+    }
+  })
+})();
+
 
