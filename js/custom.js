@@ -67,6 +67,16 @@ $('.services__slider').owlCarousel({
       sliderAct[0].classList.add('custom-act');
     }
 
+  },
+  onChanged: function(e) {
+    var idx = e.item.index - 2;
+    if (idx === -1) {
+      idx = $('.doing__block').length - 1;
+    }
+    if (idx >= 0) {
+      $('.doing__block').removeClass('active');
+      $('.doing__block[data="' + idx + '"]').addClass('active')
+    }
   }
 })
 
@@ -190,6 +200,89 @@ $('#phone').mask('0 (000) 000 - 00 - 00');
   });
 })();
 
+(function() {
+  var maychange = document.querySelectorAll('input[data="may-change"]');
+
+  maychange.forEach(function(i) {
+    i.addEventListener('input', function() {
+      var dataInput = this.getAttribute('data-input')
+      if (this.value) {
+        document.querySelector('div[data-input="' + dataInput+'"]').classList.add('active')
+      } else {
+        document.querySelector('div[data-input="' + dataInput+'"]').classList.remove('active')
+      }
+    })
+  })
+
+})();
+
+
+// $(function() {
+//   var counts = {};
+//   var offsets = {};
+//   var type = null;
+//   var url = 'http://localhost:3008/'
+
+//   $('#nav-tabContent .tab-pane').each(function() {
+//     offsets[$(this).attr('data')] = 0;
+//     counts[$(this).attr('data')] = $(this).find('.works').length;
+//   });
+
+
+//   console.log(offsets)
+//   console.log(counts)
+
+//   $('.btn--more').on('click', function(e) {
+//     var button = $(this);
+//     var type = $(this).parents('#nav-tabContent').find('.tab-pane').attr('data');
+//     getNew(button, type, counts[type], offsets[type]);
+
+//   });
+
+//   function getNew(button, type, count, offset) {
+//     console.log(button)
+//     var toSend = {
+//       type: type,
+//       count: count,
+//       offset: offset
+//     }
+//     $.getJSON(url, toSend, function(res) {
+//       offsets[type] += count;
+//       console.log(res)
+
+//       var parent = button.closest('.tab-pane').find('.wor');
+//       parent = parent[0];
+
+//       for(var idx in res) {
+//         var item = res[idx];
+//         console.log(item)
+//         parent.innerHTML = parent.innerHTML +
+//         '<div class="works">' +
+//           '<div class="works__column">' +
+//             '<img class="img-fluid" src="'+ item.img +'" alt="Проект">' +
+//           '</div>' +
+//           '<section class="works__column works__column--4">' +
+//             '<header class="works__block">' +
+//               '<h3 class="works__title">'+ item.title +'</h3>' +
+//               '<p class="works__tag">'+ item.tags +'</p>' +
+//             '</header>' +
+//             '<footer class="works__block">' +
+//               '<div class="works__text">' +
+//                 '<p>'+ item.previewText +'</p>' +
+//               '</div>' +
+//               '<a class="btn" href="item.link">узнать подробности</a>' +
+//             '</footer>' +
+//           '</section>' +
+//         '</div>';
+//       }
+
+//       if (res.length < count) {
+//           button.hide();
+//       }
+//     })
+//   }
+// });
+
 $(document).ready(function(){
   var controls = {
     video: $("#video"),
@@ -236,19 +329,3 @@ $(document).ready(function(){
   playVideo(btnPlay);
 
 })();
-
-(function() {
-  var blockCheckbox = document.querySelector('#visible-check');
-  var check = document.querySelector('#check');
-  var discutionInput = document.querySelector('#discussion');
-
-  discutionInput.addEventListener('input', function() {
-    if (this.value) {
-      check.classList.add('active')
-    } else {
-      check.classList.remove('active')
-    }
-  })
-})();
-
-

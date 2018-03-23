@@ -4,11 +4,18 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: @bg-color;
-  background-image: url("img/digital.png"), url("img/bg-pattern.png");
+  background-image: url("img/digital-mobile.png"), url("img/bg-pattern.png");
   background-repeat: no-repeat no-repeat;
-  background-size: auto, cover;
+  background-size: contain, cover;
   background-position: center;
   overflow: hidden;
   min-height: 100vh;
-  // min-height: 712px;
+
+  @media(min-width: @screen-md) {
+    background-image: url("img/digital.png"), url("img/bg-pattern.png");
+  }
+
+  @media(min-width: @screen-xl) {
+    background-size: auto, cover;
+  }
 }

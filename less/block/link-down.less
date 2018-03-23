@@ -3,37 +3,92 @@
 
   @media(min-width: @screen-md) {
     position: absolute;
-    bottom: 80px;
     left: 50%;
+    bottom: 40px;
     display: block;
-    margin-left: -28px;
-    color: @white;
+    height: 50px;
+    width: 2px;
+    cursor: pointer;
+    background-color: transparent;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: @font-size--small;
     text-decoration: none;
-    transform: rotate(-90deg) translateX(50%);
+    color: @white;
+
+    span {
+      position: absolute;
+      top: -50px;
+      left: -26px;
+      transform: rotate(-90deg);
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: @white;
+      transition: @transition-time;
+    }
+
+    &::before {
+      transform-origin: 0 100%;
+      animation-name: line-bottom;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(.25,0,.25,1);
+    }
 
     &::after {
-      content: '';
-      position: absolute;
-      bottom: -18px;
-      height: 50px;
-      width: 1px;
-      background: @white;
-      transform: rotate(90deg) translateX(50%);
-      left: -40px;
-      transition: @transition-time;
+      transform-origin: 0 0;
+      animation-name: line-top;
+      animation-fill-mode: forwards;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(.25,0,.25,1);
     }
 
     &:hover {
       color: @color-pp;
 
-      &::after {
-        background: @color-pp;
+      &::after,
+      &::before {
+        background-color: @color-pp;
       }
     }
   }
 }
 
+@keyframes line-top {
+  0% {
+    transform: translateY(-15px) scaleY(0)
+  }
 
+  60% {
+    transform: translateY(-15px) scaleY(0)
+  }
+
+  to {
+    transform: translateY(0) scaleY(1)
+  }
+}
+
+@keyframes line-bottom {
+  0% {
+    transform: translateY(0) scaleY(1)
+  }
+
+  40% {
+    transform: translateY(10px) scaleY(0)
+  }
+
+  to {
+    transform: translateY(10px) scaleY(0)
+  }
+}

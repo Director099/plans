@@ -1,6 +1,5 @@
 .form-call {
 
-
   &__block {
     display: flex;
     align-items: center;
@@ -21,6 +20,13 @@
 
   &__checkbox {
     position: relative;
+    display: block;
+    margin-left: 25px;
+    max-width: 260px;
+    margin-top: 0px;
+    height: 0;
+    opacity: 0;
+    transition: @transition-time;
 
     input {
       display: none;
@@ -45,8 +51,6 @@
       display: block;
       padding-left: 15px;
       font-size: @font-size--small;
-      margin-left: 20px;
-      margin-top: 20px;
 
       a {
         color: @color-pp;
@@ -63,10 +67,16 @@
         border-radius: @border-radius;
         border: 1px solid @black;
       }
+    }
 
-      @media(min-width: @screen-sm) {
-        margin-left: 0px;
-      }
+    &.active {
+      height: 10px;
+      margin-top: 20px;
+      opacity: 0.5;
+    }
+
+    @media(min-width: @screen-sm) {
+      margin-left: 0;
     }
   }
 

@@ -692,6 +692,7 @@ a:hover {
 button {
   transition: 0.3s;
   cursor: pointer;
+  font-family: "Proxima Nova", "Arial", sans-serif;
 }
 img {
   max-width: 100%;
@@ -741,9 +742,23 @@ textarea {
   border: 1px solid #ff4412;
 }
 .btn--pp {
+  position: relative;
   padding: 13px 60px 13px 25px;
-  background: #ff4412 url("img/strelka.png") no-repeat 88%;
+  background: #ff4412 url("img/sprite/strelka.svg") no-repeat 95%;
+  background-size: 20px;
   border: none;
+  overflow: hidden;
+}
+.btn--pp::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  height: 100%;
+  width: 45px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.22);
 }
 .btn--pp:hover {
   box-shadow: 0 0 17px 2px rgba(255, 68, 18, 0.85);
@@ -864,9 +879,9 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
   background-color: #222222;
-  background-image: url("img/digital.png"), url("img/bg-pattern.png");
+  background-image: url("img/digital-mobile.png"), url("img/bg-pattern.png");
   background-repeat: no-repeat no-repeat;
-  background-size: auto, cover;
+  background-size: contain, cover;
   background-position: center;
   overflow: hidden;
   min-height: 100vh;
@@ -881,6 +896,7 @@ textarea {
 .title-block__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .title-block__tagline {
   color: #ffffff;
@@ -1142,6 +1158,7 @@ textarea {
 .review__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .review__tagline {
   font-size: 9px;
@@ -1181,7 +1198,7 @@ textarea {
 }
 .review__video {
   position: absolute;
-  top: 0%;
+  top: 4px;
   left: 0;
   right: 0;
   width: 80%;
@@ -1231,6 +1248,7 @@ textarea {
 .doing__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .doing__title-h3 {
   font: 900 18px "Proxima Nova", "Arial", sans-serif;
@@ -1243,6 +1261,7 @@ textarea {
 .doing__title-h3 span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .doing__row {
   display: flex;
@@ -1250,6 +1269,7 @@ textarea {
   margin-right: -15px;
   margin-top: 50px;
   flex-wrap: wrap;
+  flex-direction: column-reverse;
 }
 .doing__row > * {
   display: block;
@@ -1262,6 +1282,15 @@ textarea {
 .doing__column p {
   color: #ffffff;
   font: 300 12px/18px "Proxima Nova", "Arial", sans-serif;
+}
+.doing__text {
+  min-height: 100px;
+}
+.doing__block {
+  display: none;
+}
+.doing__block.active {
+  display: block;
 }
 .footer-logo {
   display: block;
@@ -1324,6 +1353,11 @@ textarea {
 .form-mess__checkbox {
   position: relative;
   font-size: 9px;
+  padding-left: 0px;
+  margin-bottom: 0;
+  margin-left: 40px;
+  opacity: 0;
+  transition: 0.3s;
 }
 .form-mess__checkbox input {
   display: none;
@@ -1342,13 +1376,10 @@ textarea {
   z-index: 2;
 }
 .form-mess__checkbox label {
+  position: relative;
   display: block;
   max-width: 260px;
-  position: relative;
-  padding-left: 17px;
-  margin-bottom: 15px;
-  margin-left: 20px;
-  opacity: 0.5;
+  padding-left: 15px;
 }
 .form-mess__checkbox label a {
   color: #ff4412;
@@ -1365,11 +1396,18 @@ textarea {
   border-radius: 3px;
   border: 1px solid #000000;
 }
+.form-mess__checkbox.active {
+  opacity: 0.5;
+  margin-bottom: 15px;
+}
 .form-mess .btn {
   max-width: 250px;
   margin-right: 15px;
   margin-left: 15px;
   background-image: none;
+}
+.form-mess .btn::after {
+  display: none;
 }
 .write {
   max-width: 210px;
@@ -1391,6 +1429,7 @@ textarea {
 .write__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .contact {
   max-width: 210px;
@@ -1412,6 +1451,7 @@ textarea {
 .contact__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .contact__row {
   display: flex;
@@ -1461,6 +1501,13 @@ textarea {
 }
 .form-call__checkbox {
   position: relative;
+  display: block;
+  margin-left: 25px;
+  max-width: 260px;
+  margin-top: 0px;
+  height: 0;
+  opacity: 0;
+  transition: 0.3s;
 }
 .form-call__checkbox input {
   display: none;
@@ -1483,8 +1530,6 @@ textarea {
   display: block;
   padding-left: 15px;
   font-size: 9px;
-  margin-left: 20px;
-  margin-top: 20px;
 }
 .form-call__checkbox label a {
   color: #ff4412;
@@ -1499,6 +1544,11 @@ textarea {
   height: 10px;
   border-radius: 3px;
   border: 1px solid #000000;
+}
+.form-call__checkbox.active {
+  height: 10px;
+  margin-top: 20px;
+  opacity: 0.5;
 }
 .form-call .btn {
   width: 100%;
@@ -1560,6 +1610,7 @@ textarea {
 .clients__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .clients__title-h3 {
   font: 700 14px "Proxima Nova", "Arial", sans-serif;
@@ -1569,6 +1620,7 @@ textarea {
 .clients__title-h3 span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .clients__text {
   text-align: center;
@@ -1608,6 +1660,7 @@ textarea {
 .about__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .about__title-h3 {
   font: 900 18px "Proxima Nova", "Arial", sans-serif;
@@ -1620,6 +1673,7 @@ textarea {
 .about__title-h3 span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .about__tagline {
   font-size: 9px;
@@ -1704,6 +1758,7 @@ textarea {
 .what-say__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .what-say__title-h3 {
   font: 700 14px "Proxima Nova", "Arial", sans-serif;
@@ -1714,6 +1769,7 @@ textarea {
 .what-say__title-h3 span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .what-say__tagline {
   font-size: 9px;
@@ -1834,29 +1890,50 @@ textarea {
 .link-down {
   display: none;
 }
+@keyframes line-top {
+  0% {
+    transform: translateY(-15px) scaleY(0);
+  }
+  60% {
+    transform: translateY(-15px) scaleY(0);
+  }
+  to {
+    transform: translateY(0) scaleY(1);
+  }
+}
+@keyframes line-bottom {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  40% {
+    transform: translateY(10px) scaleY(0);
+  }
+  to {
+    transform: translateY(10px) scaleY(0);
+  }
+}
 .btn-group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
   margin-top: 25px;
 }
+.btn-group__list-link {
+  margin-top: 15px;
+}
 .btn-group__link {
+  display: inline-block;
   color: #ffffff;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-right: 5px;
+}
+.btn-group__link:last-child {
+  margin-right: 0;
 }
 .btn-group__link:hover {
   color: #ff4412;
   text-decoration: underline;
-}
-.btn-group--xl {
-  display: none;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-.btn-group .btn--pp {
-  box-shadow: 0 0 17px 2px rgba(255, 68, 18, 0.85);
 }
 .projects {
   background-image: url("img/bg-pattern.jpg");
@@ -1891,12 +1968,14 @@ textarea {
 .projects__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .projects__filter {
   display: none;
 }
 .projects__item {
   margin-right: 10px;
+  margin-bottom: 5px;
 }
 .projects__item a {
   display: block;
@@ -1932,11 +2011,13 @@ textarea {
 .instruments__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .services {
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
+  margin-bottom: 20px;
 }
 .services__slider .owl-item.active {
   opacity: 0.4 !important;
@@ -1946,7 +2027,7 @@ textarea {
 }
 .services__slider .owl-nav {
   position: absolute;
-  top: -5px;
+  bottom: -10px;
   right: 20px;
   max-width: 105px;
   width: 100%;
@@ -2077,6 +2158,7 @@ textarea {
 .product__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .product__title::after {
   content: '';
@@ -2329,6 +2411,7 @@ textarea {
 .works__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .works__tag {
   width: 50%;
@@ -2338,6 +2421,14 @@ textarea {
   letter-spacing: 2px;
   color: #999;
   text-align: right;
+}
+.works__text {
+  max-height: 85px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.works__text p {
+  margin-bottom: 0;
 }
 .works .btn {
   min-width: 190px;
@@ -2534,9 +2625,6 @@ textarea {
 .modal.show .modal-dialog {
   transform: translate(0, 0);
 }
-.modal-form {
-  margin-bottom: 15px;
-}
 .modal-form__control {
   text-align: center;
   width: 100%;
@@ -2668,7 +2756,6 @@ textarea {
   padding-top: 75px;
   background: url("img/bg-pattern.jpg") no-repeat center;
   background-size: cover;
-  background-attachment: fixed;
 }
 .task__container {
   display: block;
@@ -2689,16 +2776,12 @@ textarea {
 }
 .task__video-play {
   position: absolute;
-  top: 0%;
-  left: 0;
+  top: 11%;
+  left: 2px;
   right: 0;
-  width: 80%;
-  height: 94%;
-  max-width: 880px;
+  height: 74.2%;
   margin: 0 auto;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  object-fit: cover;
+  object-fit: fill;
   z-index: 0;
 }
 .single-title {
@@ -2727,6 +2810,7 @@ textarea {
 .single-title__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .single-title__title-h3 {
   text-align: center;
@@ -2801,6 +2885,7 @@ textarea {
 .design__link-project span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .design__link-project::after {
   content: '';
@@ -2834,13 +2919,15 @@ textarea {
   padding-right: 15px;
 }
 .questions__title {
-  font: 900 24px "Proxima Nova", "Arial", sans-serif;
+  font: 900 18px "Proxima Nova", "Arial", sans-serif;
+  margin-top: 0;
   text-align: center;
   color: #ffffff;
 }
 .questions__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .questions__text {
   font: 700 14px "Proxima Nova", "Arial", sans-serif;
@@ -2853,6 +2940,7 @@ textarea {
 .questions__text span {
   font-family: "Playfair Display", "Arial", sans-serif;
   font-weight: 700;
+  font-style: italic;
 }
 .form-quest {
   display: flex;
@@ -2891,6 +2979,17 @@ textarea {
 }
 .form-quest__group--textarea {
   margin-bottom: 15px;
+}
+.form-quest__group--checkbox {
+  margin-bottom: 0 !important;
+  opacity: 0;
+  transition: 0.3s;
+  height: 0;
+}
+.form-quest__group--checkbox.active {
+  opacity: 1;
+  height: 10px;
+  margin-bottom: 15px !important;
 }
 .form-quest__group label {
   position: relative;
@@ -3054,9 +3153,8 @@ textarea {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .form-mess__checkbox label {
-    margin-left: auto;
-    margin-right: auto;
+  .form-mess__checkbox {
+    margin-left: 15px;
   }
   .form-mess .btn {
     margin-left: auto;
@@ -3087,8 +3185,8 @@ textarea {
   .form-call__block {
     flex-wrap: nowrap;
   }
-  .form-call__checkbox label {
-    margin-left: 0px;
+  .form-call__checkbox {
+    margin-left: 0;
   }
   .form-call .btn {
     margin-top: 0;
@@ -3207,6 +3305,13 @@ textarea {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .form-quest__group--checkbox {
+    display: block;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .choice__call {
     text-align: left;
     margin-bottom: 0;
@@ -3230,6 +3335,9 @@ textarea {
   }
   .page-footer__container {
     max-width: 100%;
+  }
+  .fullpage {
+    background-image: url("img/digital.png"), url("img/bg-pattern.png");
   }
   .title-block__title {
     font: 900 36px "Proxima Nova", "Arial", sans-serif;
@@ -3270,8 +3378,12 @@ textarea {
   .doing__title-h3 {
     font: 900 27px/37px "Proxima Nova", "Arial", sans-serif;
   }
+  .doing__title-h3 {
+    min-height: 76px;
+  }
   .doing__row {
     flex-wrap: nowrap;
+    flex-direction: row;
   }
   .doing__column {
     display: block;
@@ -3292,10 +3404,8 @@ textarea {
   .form-mess__group {
     margin-bottom: 30px;
   }
-  .form-mess__checkbox label {
-    margin-left: auto;
+  .form-mess__checkbox {
     margin-top: -15px;
-    margin-right: auto;
   }
   .write__title {
     font: 900 27px/37px "Proxima Nova", "Arial", sans-serif;
@@ -3357,33 +3467,59 @@ textarea {
   }
   .link-down {
     position: absolute;
-    bottom: 80px;
     left: 50%;
+    bottom: 40px;
     display: block;
-    margin-left: -28px;
-    color: #ffffff;
+    height: 50px;
+    width: 2px;
+    cursor: pointer;
+    background-color: transparent;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 9px;
     text-decoration: none;
-    transform: rotate(-90deg) translateX(50%);
+    color: #ffffff;
+  }
+  .link-down span {
+    position: absolute;
+    top: -50px;
+    left: -26px;
+    transform: rotate(-90deg);
+  }
+  .link-down::after,
+  .link-down::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.3s;
+  }
+  .link-down::before {
+    transform-origin: 0 100%;
+    animation-name: line-bottom;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1);
   }
   .link-down::after {
-    content: '';
-    position: absolute;
-    bottom: -18px;
-    height: 50px;
-    width: 1px;
-    background: #ffffff;
-    transform: rotate(90deg) translateX(50%);
-    left: -40px;
-    transition: 0.3s;
+    transform-origin: 0 0;
+    animation-name: line-top;
+    animation-fill-mode: forwards;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.25, 0, 0.25, 1);
   }
   .link-down:hover {
     color: #ff4412;
   }
-  .link-down:hover::after {
-    background: #ff4412;
+  .link-down:hover::after,
+  .link-down:hover::before {
+    background-color: #ff4412;
   }
   .projects__container {
     max-width: 100%;
@@ -3410,7 +3546,6 @@ textarea {
   .services__slider .owl-nav {
     bottom: -10px;
     left: 215px;
-    top: inherit;
     right: inherit;
   }
   .services__slider .owl-dots .owl-dot::after {
@@ -3516,13 +3651,16 @@ textarea {
     max-width: 100%;
   }
   .questions__title {
-    font: 900 36px "Proxima Nova", "Arial", sans-serif;
+    font: 900 27px/37px "Proxima Nova", "Arial", sans-serif;
   }
   .questions__text {
     font: 700 21px/28px "Proxima Nova", "Arial", sans-serif;
   }
   .form-quest__group--textarea {
     margin-bottom: 30px;
+  }
+  .form-quest__group--checkbox.active {
+    margin-bottom: 30px !important;
   }
   .form-quest__group {
     margin-bottom: 30px;
@@ -3637,10 +3775,6 @@ textarea {
     background-color: #fafafa;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  .form-mess__checkbox label {
-    margin-left: auto;
-    margin-right: initial;
   }
   .form-mess .btn {
     margin-left: auto;
@@ -3803,6 +3937,9 @@ textarea {
   .page-footer__container {
     max-width: 1180px;
   }
+  .fullpage {
+    background-size: auto, cover;
+  }
   .main-block {
     max-width: 1180px;
   }
@@ -3848,15 +3985,6 @@ textarea {
   }
   .what-say__container {
     max-width: 1180px;
-  }
-  .btn-group__link {
-    margin-bottom: 0;
-  }
-  .btn-group--lg {
-    display: none;
-  }
-  .btn-group--xl {
-    display: flex;
   }
   .projects__container {
     max-width: 1180px;

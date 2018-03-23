@@ -28,15 +28,21 @@
     color: @white;
     text-align: left;
     margin-bottom: 30px;
+
+    @media(min-width: @screen-md) {
+      min-height: 76px;
+    }
   }
 
   &__row {
     .row();
     margin-top: 50px;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
 
     @media(min-width: @screen-md) {
       flex-wrap: nowrap;
+      flex-direction: row;
     }
   }
 
@@ -47,6 +53,18 @@
     p {
       color: @white;
       font: 300 @font-size--small-2/18px "Proxima Nova", "Arial", sans-serif;
+    }
+  }
+
+  &__text {
+    min-height: 100px;
+  }
+
+  &__block {
+    display: none;
+
+    &.active {
+      display: block;
     }
   }
 }

@@ -34,6 +34,24 @@
       }
     }
 
+    &--checkbox {
+      .col(sm, 12);
+      margin-bottom: 0 !important;
+      opacity: 0;
+      transition: @transition-time;
+      height: 0;
+
+      &.active {
+        opacity: 1;
+        height: 10px;
+        margin-bottom: 15px !important;
+
+        @media(min-width: @screen-md) {
+          margin-bottom: 30px !important;
+        }
+      }
+    }
+
     label {
       position: relative;
       display: block;

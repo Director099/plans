@@ -23,6 +23,7 @@ a {
 button {
   transition: @transition-time;
   cursor: pointer;
+  font-family: "Proxima Nova", "Arial", sans-serif;
 }
 
 img {
@@ -84,9 +85,24 @@ textarea {
   }
 
   &--pp {
+    position: relative;
     padding: 13px 60px 13px 25px;
-    background: @color-pp url("img/strelka.png") no-repeat 88%;
+    background: @color-pp url("img/sprite/strelka.svg") no-repeat 95%;
+    background-size: 20px;
     border: none;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1px;
+      bottom: 0;
+      height: 100%;
+      width: 45px;
+      border-radius: 50%;
+      box-shadow:0 0 25px 10px fade(@black, 22%);
+    }
 
     &:hover {
       box-shadow: 0 0 17px 2px rgba(255,68,18,.85);

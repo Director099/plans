@@ -43,7 +43,6 @@
             <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
           </div>
         </form>
-        <p class="modal-dialog__offer">Нажимая кнопку «Перезвонить мне» я даю свое согласие на обработку <a href="#">персональных данных</a></p>
       </section>
     </div>
   </div>
@@ -127,13 +126,13 @@
             <form class="form-send" action="#">
               <label class="form-send__text" for="discussion">давайте обсудим ваш проект</label>
               <div class="form-send__rel" id="visible-check">
-                <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion">
+                <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion" data-input="shadowing-0" data="may-change">
                 <button class="form-send__btn">
                   <svg class="icon" width="20" height="20">
                     <use xlink:href="#strelka"/>
                   </svg>Отправить
                 </button>
-                <div class="form-send__checkbox" id="check">
+                <div class="form-send__checkbox" id="check" data-input="shadowing-0">
                   <input type="checkbox" id="check-1" checked required>
                   <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
                 </div>
@@ -167,5 +166,7 @@
         </a>
       </p>
     </div>
-    <a class="link-down" href="#review" id="link-down">Поехали</a>
+    <a class="link-down" href="#review" id="link-down">
+      <span>Поехали</span>
+    </a>
   </div>

@@ -30,6 +30,11 @@
   &__checkbox {
     position: relative;
     font-size: @font-size--small;
+    padding-left: 0px;
+    margin-bottom: 0;
+    margin-left: 40px;
+    opacity: 0;
+    transition: @transition-time;
 
     input {
       display: none;
@@ -50,13 +55,10 @@
     }
 
     label {
+      position: relative;
       display: block;
       max-width: 260px;
-      position: relative;
-      padding-left: 17px;
-      margin-bottom: 15px;
-      margin-left: 20px;
-      opacity: 0.5;
+      padding-left: 15px;
 
       a {
         color: @color-pp;
@@ -74,22 +76,19 @@
         border-radius: 3px;
         border: 1px solid @black;
       }
+    }
 
-      @media(min-width: @screen-sm) {
-        margin-left: auto;
-        margin-right: auto;
-      }
+    &.active {
+      opacity: 0.5;
+      margin-bottom: 15px;
+    }
 
-      @media(min-width: @screen-md) {
-        margin-left: auto;
-        margin-top: -15px;
-        margin-right: auto;
-      }
+    @media(min-width: @screen-md) {
+      margin-top: -15px;
+    }
 
-      @media(min-width: @screen-lg) {
-        margin-left: auto;
-        margin-right: initial;
-      }
+    @media(min-width: @screen-sm) {
+      margin-left: 15px;
     }
   }
 
@@ -98,6 +97,10 @@
     margin-right: 15px;
     margin-left: 15px;
     background-image: none;
+
+    &::after {
+      display: none;
+    }
 
     @media(min-width: @screen-sm) {
       margin-left: auto;

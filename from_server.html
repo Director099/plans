@@ -1,0 +1,54 @@
+<script>
+
+
+  var url = new URL(location.href);
+  var paramStr = url.search.slice(1);
+  var paramArr = paramStr.split('&');
+  var params = {};
+  paramArr.forEach(item => {
+    var itemArr = item.split('=');
+    params[itemArr[0]] = itemArr[1];
+  });
+
+  var count = params.count;
+  var offset = params.offset;
+  var type = params.type;
+
+  var result = [];
+  for(var i = offset; i < json.length; i++) {
+    var item = json[i];
+    if (item.type === type || type === 'all') {
+      result.push(item)
+    }
+    if (result.length >= count) break;
+  }
+  console.log(result)
+  document.write(JSON.stringify(result));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -43,7 +43,6 @@
             <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
           </div>
         </form>
-        <p class="modal-dialog__offer">Нажимая кнопку «Перезвонить мне» я даю свое согласие на обработку <a href="#">персональных данных</a></p>
       </section>
     </div>
   </div>
@@ -127,13 +126,13 @@
             <form class="form-send" action="#">
               <label class="form-send__text" for="discussion">давайте обсудим ваш проект</label>
               <div class="form-send__rel" id="visible-check">
-                <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion">
+                <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion" data-input="shadowing-0" data="may-change">
                 <button class="form-send__btn">
                   <svg class="icon" width="20" height="20">
                     <use xlink:href="#strelka"/>
                   </svg>Отправить
                 </button>
-                <div class="form-send__checkbox" id="check">
+                <div class="form-send__checkbox" id="check" data-input="shadowing-0">
                   <input type="checkbox" id="check-1" checked required>
                   <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
                 </div>
@@ -167,7 +166,9 @@
         </a>
       </p>
     </div>
-    <a class="link-down" href="#review" id="link-down">Поехали</a>
+    <a class="link-down" href="#review" id="link-down">
+      <span>Поехали</span>
+    </a>
   </div>
 
   <main role="main">
@@ -183,8 +184,8 @@
           </section>
         </div>
         <div class="task__video">
-          <img class="img-fluid" src="img/mackbook(9).png" alt="Мокап">
-          <video poster="img/poster-video.png" class="task__video-play" id="video">
+          <img class="img-fluid" src="img/macbook-portfolio.png" alt="Мокап">
+          <video poster="img/poster-video.png" class="task__video-play" id="video" loop>
             <source src="video/video.mp4" type="video/mp4">
           </video>
           <button class="btn-play">Play</button>
@@ -232,35 +233,81 @@
         </div>
       </div>
     </div>
+    <div class="callback">
+      <div class="callback__container">
+        <div class="callback__row">
+          <div class="callback__column">
+            <section class="contact">
+              <p class="contact__tagline">contacts</p>
+              <h2 class="contact__title">Контакты</h2>
+              <form class="form-call" action="#">
+                <div class="form-call__block">
+                  <input class="form-call__control lurking" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __" data-input="shadowing-1" data="may-change">
+                  <button class="btn">Перезвоните мне</button>
+                </div>
+                <div class="form-call__checkbox" data-input="shadowing-1">
+                  <input type="checkbox" id="check-footer" required checked>
+                  <label for="check-footer" id="visible-checkbox">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
+              </form>
+              <span class="contact__or">или</span>
+              <div class="contact__row">
+                <div class="contact__column">
+                  <p class="address"><strong>Адрес:</strong> Уфа, Ленина 70</p>
+                  <p class="address"><strong>Тел.:</strong> <a href="tel:+79374700900">+7 (937) 470-09-00</a></p>
+                  <p class="address"><strong>e-mail:</strong> <a href="mailto:info@pplans.ru">info@pplans.ru</a></p>
+                </div>
+                <div class="contact__column-5">
+                  <div class="footer-soc">
+                    <p class="footer-soc__text">social</p>
+                    <p class="footer-soc__social">
+                      <a class="footer-soc__icon" href="https://www.facebook.com/People-Plans-2053189688271847/">
+                        <svg class="icon" width="15" height="15">
+                          <use xlink:href="#facebook"/>
+                        </svg>facebook
+                      </a>
+                      <a class="footer-soc__icon" href="https://www.instagram.com/peopleplans/">
+                        <svg class="icon" width="15" height="15">
+                          <use xlink:href="#im"/>
+                        </svg>instagram
+                      </a>
+                      <a class="footer-soc__icon" href="https://vk.com/pplans">
+                        <svg class="icon" width="15" height="15">
+                          <use xlink:href="#vk"/>
+                        </svg>vk
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="callback__column">
+            <section class="write">
+              <p class="write__tagline">get in touch</p>
+              <h2 class="write__title">Напишите <span>нам</span></h2>
+              <form class="form-mess" action="index.html">
+                <label class="form-mess__group">
+                  <input class="form-mess__control" type="text" placeholder="Имя">
+                </label>
+                <label class="form-mess__group">
+                  <input class="form-mess__control lurking" type="email" placeholder="E-mail" data-input="shadowing-2" data="may-change">
+                </label>
+                <label class="form-mess__group form-mess__group--textarea">
+                  <textarea class="form-mess__control" placeholder="Сообщение" rows="4"></textarea>
+                </label>
+                <div class="form-mess__checkbox" data-input="shadowing-2">
+                  <input type="checkbox" id="check-footer-1" required checked>
+                  <label for="check-footer-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+                </div>
+                <button class="btn btn--pp">отправить сообщение</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-  <div class="questions">
-    <section class="questions__container">
-      <h2 class="questions__title">Нужен <span>подобный</span> проект? — Свяжитесь с нами</h2>
-      <p class="questions__text">Оставьте заявку, мы проконсультируем вас и предложим оптимальные решения.</p>
-      <form class="form-quest" action="#">
-        <label class="form-quest__group">
-          <input class="form-quest__control" type="text" placeholder="Введите имя">
-        </label>
-        <label class="form-quest__group">
-          <input class="form-quest__control" type="text" placeholder="Введите номер телефона">
-        </label>
-        <label class="form-quest__group form-quest__group--textarea">
-          <textarea class="form-quest__control" placeholder="Сообщение" rows="4"></textarea>
-        </label>
-        <div class="form-quest__group form-quest__group--textarea">
-          <input class="form-quest__none" type="checkbox" id="check-2" required checked>
-          <label for="check-2">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
-        </div>
-        <div class="choice">
-          <p class="choice__call">
-            <span class="choice__text">Или позвоните нам:</span>
-            <a class="choice__number" href="+79374700900">+7 (937) 47-00-900</a>
-          </p>
-          <button class="btn btn--pp">отправить заявку </button>
-        </div>
-      </form>
-    </section>
-  </div>
 	<footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__row">
