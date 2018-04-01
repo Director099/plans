@@ -400,6 +400,23 @@ $('.video-rev__slider').owlCarousel({
   }
 })
 
+$('.process-slider').owlCarousel({
+    loop: false,
+    dots: true,
+    nav: true,
+    center: true,
+    items: 1,
+
+    onInitialized: function() {
+      var dot = document.querySelectorAll('.process-slider .owl-dot');
+      var maxDot = Math.max(dot.length);
+
+      for (var i = 0; i < dot.length; i++) {
+        dot[i].innerHTML = '<b>' + '0' + (1 + i)  + '</b>' + '<span class="max-number"> / ' + '0' + maxDot + ' </span>';
+      }
+    }
+})
+
 $(".navigation__item > a").click(function () {
   var elementClick = $(this).attr("href")
   var destination = $(elementClick).offset().top;
