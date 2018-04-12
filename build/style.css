@@ -797,75 +797,78 @@ textarea {
 .btn-play--close {
   opacity: 0;
 }
-.bg-even > div {
+.bg-even {
   background-image: url("img/bg-pattern.png");
-  background-size: auto;
+  background-size: cover;
   background-position: center;
   background-repeat: repeat;
 }
-.bg-even > div:nth-child(even) {
+.bg-even:nth-child(even) {
   background-color: #232323;
   color: #ffffff;
 }
-.bg-even > div:nth-child(even) .address a {
+.bg-even:nth-child(even) .address a {
   color: #ffffff;
 }
-.bg-even > div:nth-child(even) .address a:hover {
+.bg-even:nth-child(even) .address a:hover {
   color: #ff4412;
 }
-.bg-even > div:nth-child(even) .icon {
+.bg-even:nth-child(even) .icon {
   fill: #ffffff;
 }
-.bg-even > div:nth-child(even) .icon:hover {
+.bg-even:nth-child(even) .icon:hover {
   fill: #ff4412;
 }
-.bg-even > div:nth-child(even) input,
-.bg-even > div:nth-child(even) textarea {
+.bg-even:nth-child(even) input,
+.bg-even:nth-child(even) textarea {
   border: 1px solid #ffffff;
   color: #ffffff;
   /* Firefox 19+ */
   /* Firefox 18- */
 }
-.bg-even > div:nth-child(even) input::-webkit-input-placeholder,
-.bg-even > div:nth-child(even) textarea::-webkit-input-placeholder {
+.bg-even:nth-child(even) input::-webkit-input-placeholder,
+.bg-even:nth-child(even) textarea::-webkit-input-placeholder {
   color: #ffffff;
   letter-spacing: 1px;
   font-weight: 300;
 }
-.bg-even > div:nth-child(even) input::-moz-placeholder,
-.bg-even > div:nth-child(even) textarea::-moz-placeholder {
+.bg-even:nth-child(even) input::-moz-placeholder,
+.bg-even:nth-child(even) textarea::-moz-placeholder {
   color: #ffffff;
   letter-spacing: 1px;
   font-weight: 300;
 }
-.bg-even > div:nth-child(even) input:-moz-placeholder,
-.bg-even > div:nth-child(even) textarea:-moz-placeholder {
+.bg-even:nth-child(even) input:-moz-placeholder,
+.bg-even:nth-child(even) textarea:-moz-placeholder {
   color: #ffffff;
   letter-spacing: 1px;
   font-weight: 300;
 }
-.bg-even > div:nth-child(even) input:-ms-input-placeholder,
-.bg-even > div:nth-child(even) textarea:-ms-input-placeholder {
+.bg-even:nth-child(even) input:-ms-input-placeholder,
+.bg-even:nth-child(even) textarea:-ms-input-placeholder {
   color: #ffffff;
   letter-spacing: 1px;
   font-weight: 300;
 }
-.bg-even > div:nth-child(even) .btn {
+.bg-even:nth-child(even) .btn {
   background: #ff4412;
   color: #ffffff;
 }
-.bg-even > div:nth-child(even) .form-call__checkbox label::after,
-.bg-even > div:nth-child(even) .form-call__checkbox label::before,
-.bg-even > div:nth-child(even) .form-mess__checkbox label::after,
-.bg-even > div:nth-child(even) .form-mess__checkbox label::before {
+.bg-even:nth-child(even) .form-call__checkbox label::after,
+.bg-even:nth-child(even) .form-call__checkbox label::before,
+.bg-even:nth-child(even) .form-mess__checkbox label::after,
+.bg-even:nth-child(even) .form-mess__checkbox label::before {
   border-color: #ffffff;
 }
-.bg-even > div:nth-child(even) .contact__or::after,
-.bg-even > div:nth-child(even) .contact__or::before {
+.bg-even:nth-child(even) .contact__or::after,
+.bg-even:nth-child(even) .contact__or::before {
   background: #ffffff;
 }
-.bg-even > div:nth-child(even) .design__link-project {
+.bg-even:nth-child(even) .design__link-project {
   color: #ffffff;
+}
+.bg-even:nth-child(even).callback {
+  background-image: none;
 }
 #scrollUp {
   bottom: 60px;
@@ -1354,7 +1357,9 @@ textarea {
   margin-bottom: 15px;
 }
 .callback {
-  background: url("img/footer-bg-mb.jpg") no-repeat left bottom;
+  background-image: url("img/footer-bg-mb.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
   overflow: hidden;
   padding-bottom: 75px;
   padding-top: 50px;
@@ -2641,6 +2646,7 @@ textarea {
 .modal .modal-dialog--rev iframe {
   width: 100%;
   height: 100%;
+  border: none;
 }
 .modal .modal-dialog--rev .modal-dialog__close {
   top: -5px;
@@ -3642,7 +3648,9 @@ textarea {
     max-width: 100%;
   }
   .callback {
-    background: url("img/footer-bg-tb.jpg") no-repeat bottom;
+    background-image: url("img/footer-bg-tb.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
   .form-mess__group--textarea {
     margin-bottom: 30px;
@@ -3876,7 +3884,7 @@ textarea {
   .worker {
     max-width: 600px;
     height: 370px;
-    margin: 0 auto;
+    margin: 30px auto 0;
   }
   .task__container {
     max-width: 100%;
@@ -4124,6 +4132,9 @@ textarea {
   }
   .works .btn {
     margin-left: inherit;
+  }
+  .worker {
+    margin-top: 0;
   }
   .task__container {
     max-width: 962px;

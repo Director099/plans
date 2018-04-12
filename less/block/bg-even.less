@@ -1,7 +1,7 @@
-.bg-even > div {
+.bg-even {
 
   background-image: url("img/bg-pattern.png");
-  background-size: auto;
+  background-size: cover;
   background-position: center;
   background-repeat: repeat;
 
@@ -56,17 +56,9 @@
     .design__link-project {
       color: @white;
     }
+
+    &.callback {
+      background-image: none;
+    }
   }
 }
-
-// .section {
-//
-//   background-image: url("img/bg-pattern.png");
-//   background-size: auto;
-//   background-position: center;
-//   background-repeat: repeat;
-//
-//   &:nth-child(even) {
-//     background-color: @body-odd;
-//   }
-// }

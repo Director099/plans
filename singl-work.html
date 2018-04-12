@@ -1,152 +1,76 @@
 @@include('_include/header.html')
-  <main class="bg-even" role="main">
-    <div class="task">
-      <div class="task__container">
-        <div class="single-title">
-          <section class="single-title__column">
-            <h2 class="single-title__title">Задача <span>проекта</span></h2>
-          </section>
-          <section class="single-title__column-2">
-            <h2 class="single-title__title-h3">Разработать стильный сайт с удобной онлайн записью для студии красоты EVE | the nail lounge</h2>
-            <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-          </section>
-        </div>
-        <div class="task__video">
-          <img class="img-fluid" src="img/macbook-portfolio.png" alt="Мокап">
-          <video poster="img/poster-video.png" class="task__video-play" id="video" loop>
-            <source src="video/video.mp4" type="video/mp4">
-          </video>
-          <button class="btn-play">Play</button>
-        </div>
-      </div>
-    </div>
-    <div class="process">
-      <div class="process__container">
-        <div class="single-title single-title--color">
-          <section class="single-title__column">
-            <h2 class="single-title__title">Задача <span>проекта</span></h2>
-          </section>
-          <section class="single-title__column-2">
-            <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
-            <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
-          </section>
-        </div>
-        <div class="owl-carousel owl-theme process-slider">
-          <div class="item">
-            <div class="process__video">
-              <img class="img-fluid" src="img/browser.png" alt="Мокап">
-              <img class="img-fluid" src="img/process.jpg" alt="мокап">
-            </div>
-            <div class="process__column">
-              <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="process__video">
-              <img class="img-fluid" src="img/browser.png" alt="Мокап">
-              <img class="img-fluid" src="img/process.jpg" alt="мокап">
-            </div>
-            <div class="process__column">
-              <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="design">
-      <div class="design__container">
-        <div class="single-title">
-          <section class="single-title__column">
-            <h2 class="single-title__title">Задача <span>проекта</span></h2>
-          </section>
-          <section class="single-title__column-2">
-            <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
-            <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
-          </section>
-        </div>
-        <div class="design__video">
-          <img class="img-fluid" src="img/browser-2.jpg" alt="Мокап">
-          <img class="img-fluid" src="img/process.jpg" alt="мокап">
-        </div>
-        <div class="design__column">
-          <a class="design__link-project" href="#">EVENAILLOUNGE.RU</a>
+  <div class="bg-even task" id="review">
+    <div class="task__container">
+      <div class="single-title">
+        <section class="single-title__column">
+          <h2 class="single-title__title">Задача <span>проекта</span></h2>
+        </section>
+        <section class="single-title__column-2">
+          <h2 class="single-title__title-h3">Разработать стильный сайт с удобной онлайн записью для студии красоты EVE | the nail lounge</h2>
           <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-        </div>
+        </section>
+      </div>
+      <div class="task__video">
+        <img class="img-fluid" src="img/macbook-portfolio.png" alt="Мокап" id="playpause">
+        <video poster="img/poster-video.png" class="task__video-play" id="video" loop>
+          <source src="video/video.mp4" type="video/mp4">
+        </video>
+        <button class="btn-play">Play</button>
       </div>
     </div>
-    <div class="callback">
-      <div class="callback__container">
-        <div class="callback__row">
-          <div class="callback__column">
-            <section class="contact">
-              <p class="contact__tagline">contacts</p>
-              <h2 class="contact__title">Контакты</h2>
-              <form class="form-call" action="#">
-                <div class="form-call__block">
-                  <input class="form-call__control lurking" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __" data-input="shadowing-1" data="may-change">
-                  <button class="btn">Перезвоните мне</button>
-                </div>
-                <div class="form-call__checkbox" data-input="shadowing-1">
-                  <input type="checkbox" id="check-footer" required checked>
-                  <label for="check-footer" id="visible-checkbox">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
-                </div>
-              </form>
-              <span class="contact__or">или</span>
-              <div class="contact__row">
-                <div class="contact__column">
-                  <p class="address"><strong>Адрес:</strong> Уфа, Ленина 70</p>
-                  <p class="address"><strong>Тел.:</strong> <a href="tel:+79374700900">+7 (937) 470-09-00</a></p>
-                  <p class="address"><strong>e-mail:</strong> <a href="mailto:info@pplans.ru">info@pplans.ru</a></p>
-                </div>
-                <div class="contact__column-5">
-                  <div class="footer-soc">
-                    <p class="footer-soc__text">social</p>
-                    <p class="footer-soc__social">
-                      <a class="footer-soc__icon" href="https://www.facebook.com/People-Plans-2053189688271847/">
-                        <svg class="icon" width="15" height="15">
-                          <use xlink:href="#facebook"/>
-                        </svg>facebook
-                      </a>
-                      <a class="footer-soc__icon" href="https://www.instagram.com/peopleplans/">
-                        <svg class="icon" width="15" height="15">
-                          <use xlink:href="#im"/>
-                        </svg>instagram
-                      </a>
-                      <a class="footer-soc__icon" href="https://vk.com/pplans">
-                        <svg class="icon" width="15" height="15">
-                          <use xlink:href="#vk"/>
-                        </svg>vk
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
+  </div>
+  <div class="bg-even process">
+    <div class="process__container">
+      <div class="single-title single-title--color">
+        <section class="single-title__column">
+          <h2 class="single-title__title">Задача <span>проекта</span></h2>
+        </section>
+        <section class="single-title__column-2">
+          <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
+          <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
+        </section>
+      </div>
+      <div class="owl-carousel owl-theme process-slider">
+        <div class="item">
+          <div class="process__video">
+            <img class="img-fluid" src="img/browser.png" alt="Мокап">
+            <img class="img-fluid" src="img/process.jpg" alt="мокап">
           </div>
-          <div class="callback__column">
-            <section class="write">
-              <p class="write__tagline">get in touch</p>
-              <h2 class="write__title">Напишите <span>нам</span></h2>
-              <form class="form-mess" action="index.html">
-                <label class="form-mess__group">
-                  <input class="form-mess__control" type="text" placeholder="Имя">
-                </label>
-                <label class="form-mess__group">
-                  <input class="form-mess__control lurking" type="email" placeholder="E-mail" data-input="shadowing-2" data="may-change">
-                </label>
-                <label class="form-mess__group form-mess__group--textarea">
-                  <textarea class="form-mess__control" placeholder="Сообщение" rows="4"></textarea>
-                </label>
-                <div class="form-mess__checkbox" data-input="shadowing-2">
-                  <input type="checkbox" id="check-footer-1" required checked>
-                  <label for="check-footer-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
-                </div>
-                <button class="btn btn--pp">отправить сообщение</button>
-              </form>
-            </section>
+          <div class="process__column">
+            <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="process__video">
+            <img class="img-fluid" src="img/browser.png" alt="Мокап">
+            <img class="img-fluid" src="img/process.jpg" alt="мокап">
+          </div>
+          <div class="process__column">
+            <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
           </div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+  <div class="bg-even design">
+    <div class="design__container">
+      <div class="single-title">
+        <section class="single-title__column">
+          <h2 class="single-title__title">Задача <span>проекта</span></h2>
+        </section>
+        <section class="single-title__column-2">
+          <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
+          <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
+        </section>
+      </div>
+      <div class="design__video">
+        <img class="img-fluid" src="img/browser-2.jpg" alt="Мокап">
+        <img class="img-fluid" src="img/process.jpg" alt="мокап">
+      </div>
+      <div class="design__column">
+        <a class="design__link-project" href="#">EVENAILLOUNGE.RU</a>
+        <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
+      </div>
+    </div>
+  </div>
 @@include('_include/footer.html')
