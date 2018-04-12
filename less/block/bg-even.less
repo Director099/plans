@@ -1,0 +1,72 @@
+.bg-even > div {
+
+  background-image: url("img/bg-pattern.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+
+  &:nth-child(even) {
+    background-color: @body-odd;
+    color: @white;
+
+    .address a {
+      color: @white;
+
+      &:hover {
+        color: @color-pp;
+      }
+    }
+
+    .icon {
+      fill: @white;
+
+      &:hover {
+        fill: @color-pp;
+      }
+    }
+
+    input,
+    textarea {
+      border: 1px solid @white;
+      color: @white;
+
+      &::-webkit-input-placeholder {color:@white; letter-spacing: 1px; font-weight: 300;}
+      &::-moz-placeholder          {color:@white; letter-spacing: 1px; font-weight: 300;}/* Firefox 19+ */
+      &:-moz-placeholder           {color:@white; letter-spacing: 1px; font-weight: 300;}/* Firefox 18- */
+      &:-ms-input-placeholder      {color:@white; letter-spacing: 1px; font-weight: 300;}
+    }
+
+    .btn {
+      background: @color-pp;
+      color: @white;
+    }
+
+    .form-call__checkbox label::after,
+    .form-call__checkbox label::before,
+    .form-mess__checkbox label::after,
+    .form-mess__checkbox label::before {
+      border-color: @white;
+    }
+
+    .contact__or::after,
+    .contact__or::before {
+      background: @white
+    }
+
+    .design__link-project {
+      color: @white;
+    }
+  }
+}
+
+// .section {
+//
+//   background-image: url("img/bg-pattern.png");
+//   background-size: auto;
+//   background-position: center;
+//   background-repeat: repeat;
+//
+//   &:nth-child(even) {
+//     background-color: @body-odd;
+//   }
+// }

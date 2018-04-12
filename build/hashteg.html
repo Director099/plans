@@ -46,12 +46,12 @@
       </section>
     </div>
   </div>
-  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" data-video="https://youtube.com/embed/m-KBu9AN4JI" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog--rev" role="document">
       <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/m-KBu9AN4JI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
   </div>
   <div class="fullpage">
@@ -171,7 +171,7 @@
     </a>
   </div>
 
-  <main role="main">
+  <main class="bg-even" role="main">
     <div class="task">
       <div class="task__container">
         <div class="task__row">
@@ -213,7 +213,7 @@
                 <div class="btn-aim">
                   <div class="btn-aim__border-1">
                     <div class="btn-aim__border-2">
-                      <button class="btn btn--pp">Обсудить проект</button>
+                      <button class="btn btn--pp" data-toggle="modal" data-target="#exampleModal">Обсудить проект</button>
                     </div>
                   </div>
                 </div>

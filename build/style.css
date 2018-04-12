@@ -685,6 +685,7 @@ template {
 body {
   font: 300 12px "Proxima Nova", "Arial", sans-serif;
   color: #1a1a1a;
+  background-color: #fafafa;
 }
 a {
   color: #0275d9;
@@ -795,6 +796,76 @@ textarea {
 }
 .btn-play--close {
   opacity: 0;
+}
+.bg-even > div {
+  background-image: url("img/bg-pattern.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+}
+.bg-even > div:nth-child(even) {
+  background-color: #232323;
+  color: #ffffff;
+}
+.bg-even > div:nth-child(even) .address a {
+  color: #ffffff;
+}
+.bg-even > div:nth-child(even) .address a:hover {
+  color: #ff4412;
+}
+.bg-even > div:nth-child(even) .icon {
+  fill: #ffffff;
+}
+.bg-even > div:nth-child(even) .icon:hover {
+  fill: #ff4412;
+}
+.bg-even > div:nth-child(even) input,
+.bg-even > div:nth-child(even) textarea {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+.bg-even > div:nth-child(even) input::-webkit-input-placeholder,
+.bg-even > div:nth-child(even) textarea::-webkit-input-placeholder {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.bg-even > div:nth-child(even) input::-moz-placeholder,
+.bg-even > div:nth-child(even) textarea::-moz-placeholder {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.bg-even > div:nth-child(even) input:-moz-placeholder,
+.bg-even > div:nth-child(even) textarea:-moz-placeholder {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.bg-even > div:nth-child(even) input:-ms-input-placeholder,
+.bg-even > div:nth-child(even) textarea:-ms-input-placeholder {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.bg-even > div:nth-child(even) .btn {
+  background: #ff4412;
+  color: #ffffff;
+}
+.bg-even > div:nth-child(even) .form-call__checkbox label::after,
+.bg-even > div:nth-child(even) .form-call__checkbox label::before,
+.bg-even > div:nth-child(even) .form-mess__checkbox label::after,
+.bg-even > div:nth-child(even) .form-mess__checkbox label::before {
+  border-color: #ffffff;
+}
+.bg-even > div:nth-child(even) .contact__or::after,
+.bg-even > div:nth-child(even) .contact__or::before {
+  background: #ffffff;
+}
+.bg-even > div:nth-child(even) .design__link-project {
+  color: #ffffff;
 }
 #scrollUp {
   bottom: 60px;
@@ -1131,8 +1202,8 @@ textarea {
   z-index: 2;
 }
 .review {
-  background: url("img/hipster-bg.jpg") no-repeat;
-  background-size: cover;
+  background: url("img/hipster-bg.png") no-repeat left top;
+  background-size: contain;
   overflow: hidden;
   padding-bottom: 75px;
   padding-top: 75px;
@@ -1206,12 +1277,6 @@ textarea {
   z-index: 0;
 }
 .doing {
-  background-image: url("img/bg-patern.jpg");
-  background-size: cover;
-  background-color: #424242;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
   padding-bottom: 75px;
   padding-top: 75px;
@@ -1232,13 +1297,11 @@ textarea {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
-  color: #ffffff;
 }
 .doing__title {
   font: 900 18px "Proxima Nova", "Arial", sans-serif;
   text-align: center;
   margin-top: 0;
-  color: #ffffff;
 }
 .doing__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
@@ -1249,7 +1312,6 @@ textarea {
   font: 900 18px "Proxima Nova", "Arial", sans-serif;
   text-align: center;
   margin-top: 0;
-  color: #ffffff;
   text-align: left;
   margin-bottom: 30px;
 }
@@ -1275,7 +1337,6 @@ textarea {
   padding-right: 15px;
 }
 .doing__column p {
-  color: #ffffff;
   font: 300 12px/18px "Proxima Nova", "Arial", sans-serif;
 }
 .doing__text {
@@ -1293,7 +1354,7 @@ textarea {
   margin-bottom: 15px;
 }
 .callback {
-  background: #fafafa url("img/footer-bg-mb.jpg") no-repeat left bottom;
+  background: url("img/footer-bg-mb.jpg") no-repeat left bottom;
   overflow: hidden;
   padding-bottom: 75px;
   padding-top: 50px;
@@ -1572,9 +1633,7 @@ textarea {
   text-decoration: underline;
 }
 .clients {
-  background-image: url("img/bg-pattern.jpg");
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 45px;
@@ -1628,12 +1687,6 @@ textarea {
   margin: 0 auto;
 }
 .about {
-  background-image: url("img/bg-patern.jpg");
-  background-size: cover;
-  background-color: #424242;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
   padding-bottom: 75px;
   padding-top: 75px;
@@ -1650,7 +1703,6 @@ textarea {
   font: 900 18px "Proxima Nova", "Arial", sans-serif;
   text-align: center;
   margin-top: 0;
-  color: #ffffff;
 }
 .about__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
@@ -1661,7 +1713,6 @@ textarea {
   font: 900 18px "Proxima Nova", "Arial", sans-serif;
   text-align: center;
   margin-top: 0;
-  color: #ffffff;
   text-align: left;
   margin-bottom: 40px;
 }
@@ -1677,7 +1728,6 @@ textarea {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
-  color: #ffffff;
 }
 .about__row {
   display: flex;
@@ -1694,11 +1744,7 @@ textarea {
   padding-left: 15px;
   padding-right: 15px;
 }
-.about__column-text {
-  color: #ffffff;
-}
 .about__column-photo {
-  color: #ffffff;
   margin-left: auto;
 }
 .partners {
@@ -1725,12 +1771,6 @@ textarea {
   width: auto;
 }
 .what-say {
-  background-image: url("img/bg-patern.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
   overflow: hidden;
   padding-bottom: 75px;
   padding-top: 75px;
@@ -1748,7 +1788,6 @@ textarea {
   font: 900 18px "Proxima Nova", "Arial", sans-serif;
   text-align: center;
   margin-top: 0;
-  color: #ffffff;
 }
 .what-say__title span {
   font-family: "Playfair Display", "Arial", sans-serif;
@@ -1773,7 +1812,6 @@ textarea {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
-  color: #ffffff;
 }
 .what-say__row {
   display: flex;
@@ -1931,8 +1969,6 @@ textarea {
   text-decoration: underline;
 }
 .projects {
-  background-image: url("img/bg-pattern.jpg");
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2607,10 +2643,10 @@ textarea {
   height: 100%;
 }
 .modal .modal-dialog--rev .modal-dialog__close {
-  top: -10px;
+  top: -5px;
   right: -10px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 17px;
   color: #ffffff;
   background: #ff4412;
 }
@@ -2749,8 +2785,6 @@ textarea {
 .task {
   padding-bottom: 75px;
   padding-top: 75px;
-  background: url("img/bg-pattern.jpg") no-repeat center;
-  background-size: cover;
 }
 .task__container {
   display: block;
@@ -2825,15 +2859,9 @@ textarea {
 .single-title__title-h3 {
   text-align: center;
 }
-.single-title--color {
-  color: #ffffff;
-}
 .process {
   padding-bottom: 75px;
   padding-top: 75px;
-  background: url("img/bg-patern.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 .process__container {
   display: block;
@@ -2845,7 +2873,6 @@ textarea {
 }
 .process__column {
   margin-left: auto;
-  color: #ffffff;
 }
 .process__video {
   margin-top: 40px;
@@ -2857,9 +2884,6 @@ textarea {
 .design {
   padding-bottom: 75px;
   padding-top: 75px;
-  background: url("img/bg-pattern.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 .design__container {
   display: block;
@@ -3618,7 +3642,7 @@ textarea {
     max-width: 100%;
   }
   .callback {
-    background: #fafafa url("img/footer-bg-tb.jpg") no-repeat bottom;
+    background: url("img/footer-bg-tb.jpg") no-repeat bottom;
   }
   .form-mess__group--textarea {
     margin-bottom: 30px;
@@ -3997,7 +4021,6 @@ textarea {
   .callback {
     background-image: url("img/footer-bg.jpg");
     background-size: cover;
-    background-color: #fafafa;
     background-position: center;
     background-repeat: no-repeat;
   }

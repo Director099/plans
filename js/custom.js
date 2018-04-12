@@ -346,3 +346,14 @@ $(document).ready(function(){
   playVideo(btnPlay);
 
 })();
+
+$('.modal').on('show.bs.modal', function(){
+  var videoLink = this.dataset['video'];
+  var $iframe = $('iframe', this);
+  $iframe.attr('src', videoLink);
+});
+
+$('.modal').on('hide.bs.modal', function(){
+  var $iframe = $('iframe', this);
+  $iframe.attr('src', null);
+});
