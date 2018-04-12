@@ -1,0 +1,27 @@
+.process-creat {
+
+  &__title {
+    .font-h2();
+
+    text-align: center;
+    transform: translateY(-7px);
+
+    @media(min-width: @screen-lg) {
+      text-align: left;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+
+    @media(min-width: @screen-lg) {
+      margin-left: initial;
+      transform: translateX(-20px);
+    }
+  }
+
+  p {
+    font: 300 @font-size--small-2/18px "Proxima Nova", "Arial", sans-serif;
+  }
+}

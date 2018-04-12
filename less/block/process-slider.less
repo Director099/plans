@@ -1,0 +1,125 @@
+.process-slider {
+  position: relative;
+
+  .owl-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 180px;
+    width: 100%;
+    margin-top: 20px;
+
+    .owl-prev,
+    .owl-next {
+      position: relative;
+      width: 40px;
+      // height: 40px;
+      background: transparent;
+      font-size: 0;
+      border-radius: 0;
+      // box-shadow: 0 0 1px 1px fade(@black, 20%);
+      transition: @transition-time;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 50%;
+        height: 1.5px;
+        background: #999;
+        transition: @transition-time;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border: 3px solid transparent;
+        border-left: 7px solid #999;
+        transition: @transition-time;
+      }
+
+      &.disabled {
+        opacity: 1;
+      }
+
+      &:hover {
+        background: transparent;
+
+        &::after {
+          background: @color-pp;
+        }
+
+        &::before {
+          border-left: 7px solid @color-pp;
+        }
+      }
+    }
+
+    .owl-prev::before {
+      left: 10px;
+      right: inherit;
+      transform: translateX(-50%) translateY(-50%) rotate(180deg);
+    }
+
+    @media(min-width: @screen-lg) {
+      position: absolute;
+      bottom: 22px;
+      left: 0;
+      margin-top: 0px
+    }
+  }
+
+  .owl-dots {
+    position: relative;
+    left: 55px;
+    bottom: 20px;
+    max-width: 135px;
+    width: 100%;
+    margin: 0;
+    color: #fff;
+
+    .owl-dot {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      display: flex;
+      opacity: 0;
+      align-items: center;
+
+      &.active {
+        font-size: 18px;
+        opacity: 1;
+
+        .max-number {
+          background: transparent;
+        }
+      }
+
+      b {
+        font: 700 24px "GothamPro", "Arial", sans-serif;
+        color: @color-pp;
+        margin-right: 5px;
+      }
+
+      .max-number {
+        width: auto !important;
+        height: auto !important;
+        margin: 5px 0 0 0;
+        background: transparent;
+        font-size: 14px;
+        color: @gray;
+        font: 400 14px "GothamPro", "Arial", sans-serif;
+      }
+    }
+
+    @media(min-width: @screen-lg) {
+      position: absolute;
+      left: 60px;
+      bottom: 45px;
+    }
+  }
+}

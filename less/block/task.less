@@ -1,7 +1,5 @@
 .task {
   .padding-ident();
-  background: url("img/bg-pattern.jpg") no-repeat center;
-  background-size: cover;
 
   &__container {
     .container();
@@ -28,6 +26,19 @@
     z-index: 0;
     object-fit: fill;
     z-index: 0;
+  }
 
+  &__row {
+    .row();
+
+    justify-content: space-between;
+  }
+
+  &__col-5 {
+    .col(lg, 5);
+  }
+
+  &__col-6 {
+    .col(lg, 6);
   }
 }

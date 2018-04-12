@@ -1,0 +1,48 @@
+.border() {
+  position: relative;
+  padding: 8px;
+  border: 1px solid fade(#A2A2A2, 15%);
+  border-radius: 50px;
+  background: #fafafa;
+  z-index: 2;
+}
+
+.btn-aim {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &__border-1 {
+    .border();
+  }
+
+  &__border-2 {
+    .border();
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: fade(#A2A2A2, 15%);
+    z-index: 0;
+    max-width: 265px;
+    max-height: 115px;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &::after {
+    width: 1px;
+    height: 100%;
+
+  }
+
+  &::before {
+    height: 1px;
+    width: 100%;
+  }
+}

@@ -35,23 +35,23 @@
         </button>
         <h5 class="modal-dialog__title" id="exampleModalLabel">Введите номер телефона:</h5>
         <p class="modal-dialog__text">Среднее время ответа 5-10 мин.</p>
-        <form class="modal-form" action="">
+        <form class="modal-form" action="#">
           <input class="modal-form__control" type="text" placeholder="Телефон или E-mail">
           <button class="btn btn--pp">обсудить проект</button>
           <div class="modal-form__checkbox">
-            <input type="checkbox" id="check-1" checked required>
-            <label for="check-1">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+            <input type="checkbox" id="modal-ch" checked required>
+            <label for="modal-ch">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
           </div>
         </form>
       </section>
     </div>
   </div>
-  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" data-video="https://youtube.com/embed/m-KBu9AN4JI" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog--rev" role="document">
       <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/m-KBu9AN4JI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="100%" height="300" allowfullscreen></iframe>
     </div>
   </div>
   <div class="fullpage">
@@ -126,7 +126,7 @@
             <form class="form-send" action="#">
               <label class="form-send__text" for="discussion">давайте обсудим ваш проект</label>
               <div class="form-send__rel" id="visible-check">
-                <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion" data-input="shadowing-0" data="may-change">
+                <input class="form-send__control" type="text" placeholder="Тел. или e-mail" id="discussion" data-input="shadowing-0" data-checkbox="may-change">
                 <button class="form-send__btn">
                   <svg class="icon" width="20" height="20">
                     <use xlink:href="#strelka"/>
@@ -170,70 +170,83 @@
       <span>Поехали</span>
     </a>
   </div>
+  <main>
 
-  <main role="main">
-    <div class="task">
-      <div class="task__container">
-        <div class="single-title">
-          <section class="single-title__column">
-            <h2 class="single-title__title">Задача <span>проекта</span></h2>
-          </section>
-          <section class="single-title__column-2">
-            <h2 class="single-title__title-h3">Разработать стильный сайт с удобной онлайн записью для студии красоты EVE | the nail lounge</h2>
+  <div class="bg-even task" id="review">
+    <div class="task__container">
+      <div class="single-title">
+        <section class="single-title__column">
+          <h2 class="single-title__title">Задача <span>проекта</span></h2>
+        </section>
+        <section class="single-title__column-2">
+          <h2 class="single-title__title-h3">Разработать стильный сайт с удобной онлайн записью для студии красоты EVE | the nail lounge</h2>
+          <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
+        </section>
+      </div>
+      <div class="task__video">
+        <img class="img-fluid" src="img/macbook-portfolio.png" alt="Мокап" id="playpause">
+        <video poster="img/poster-video.png" class="task__video-play" id="video" loop>
+          <source src="video/video.mp4" type="video/mp4">
+        </video>
+        <button class="btn-play">Play</button>
+      </div>
+    </div>
+  </div>
+  <div class="bg-even process">
+    <div class="process__container">
+      <div class="single-title single-title--color">
+        <section class="single-title__column">
+          <h2 class="single-title__title">Задача <span>проекта</span></h2>
+        </section>
+        <section class="single-title__column-2">
+          <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
+          <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
+        </section>
+      </div>
+      <div class="owl-carousel owl-theme process-slider">
+        <div class="item">
+          <div class="process__video">
+            <img class="img-fluid" src="img/browser.png" alt="Мокап">
+            <img class="img-fluid" src="img/process.jpg" alt="мокап">
+          </div>
+          <div class="process__column">
             <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-          </section>
+          </div>
         </div>
-        <div class="task__video">
-          <img class="img-fluid" src="img/macbook-portfolio.png" alt="Мокап">
-          <video poster="img/poster-video.png" class="task__video-play" id="video" loop>
-            <source src="video/video.mp4" type="video/mp4">
-          </video>
-          <button class="btn-play">Play</button>
-        </div>
-      </div>
-    </div>
-    <div class="process">
-      <div class="process__container">
-        <div class="single-title single-title--color">
-          <section class="single-title__column">
-            <h2 class="single-title__title">Задача <span>проекта</span></h2>
-          </section>
-          <section class="single-title__column-2">
-            <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
-            <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
-          </section>
-        </div>
-        <div class="process__video">
-          <img class="img-fluid" src="img/browser.png" alt="Мокап">
-          <img class="img-fluid" src="img/process.jpg" alt="мокап">
-        </div>
-        <div class="process__column">
-          <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
+        <div class="item">
+          <div class="process__video">
+            <img class="img-fluid" src="img/browser.png" alt="Мокап">
+            <img class="img-fluid" src="img/process.jpg" alt="мокап">
+          </div>
+          <div class="process__column">
+            <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="design">
-      <div class="design__container">
-        <div class="single-title">
-          <section class="single-title__column">
-            <h2 class="single-title__title">Задача <span>проекта</span></h2>
-          </section>
-          <section class="single-title__column-2">
-            <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
-            <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
-          </section>
-        </div>
-        <div class="design__video">
-          <img class="img-fluid" src="img/browser-2.jpg" alt="Мокап">
-          <img class="img-fluid" src="img/process.jpg" alt="мокап">
-        </div>
-        <div class="design__column">
-          <a class="design__link-project" href="#">EVENAILLOUNGE.RU</a>
-          <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-        </div>
+  </div>
+  <div class="bg-even design">
+    <div class="design__container">
+      <div class="single-title">
+        <section class="single-title__column">
+          <h2 class="single-title__title">Задача <span>проекта</span></h2>
+        </section>
+        <section class="single-title__column-2">
+          <h2 class="single-title__title-h3">Разработка прототипа сайта и тестовой версии дизайна landing page для клиентов</h2>
+          <p>Было разработано более 5 видов прототипа в разной цветовой гамме и порядком15 вариантов полноценной версии сайта с разной айдетникой, мобильной и так далее.</p>
+        </section>
+      </div>
+      <div class="design__video">
+        <img class="img-fluid" src="img/browser-2.jpg" alt="Мокап">
+        <img class="img-fluid" src="img/process.jpg" alt="мокап">
+      </div>
+      <div class="design__column">
+        <a class="design__link-project" href="#">EVENAILLOUNGE.RU</a>
+        <p>Таким образом реализация намеченных плановых заданий позволяет выполнять важные задания по разработке модели развития. Повседневная практика показывает, что укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
       </div>
     </div>
-    <div class="callback">
+  </div>
+    <div class="bg-even callback">
       <div class="callback__container">
         <div class="callback__row">
           <div class="callback__column">
@@ -242,7 +255,7 @@
               <h2 class="contact__title">Контакты</h2>
               <form class="form-call" action="#">
                 <div class="form-call__block">
-                  <input class="form-call__control lurking" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __" data-input="shadowing-1" data="may-change">
+                  <input class="form-call__control lurking" type="tel" id="phone" placeholder="+7 (___) ___ - __ - __" data-input="shadowing-1" data-checkbox="may-change">
                   <button class="btn">Перезвоните мне</button>
                 </div>
                 <div class="form-call__checkbox" data-input="shadowing-1">
@@ -291,7 +304,7 @@
                   <input class="form-mess__control" type="text" placeholder="Имя">
                 </label>
                 <label class="form-mess__group">
-                  <input class="form-mess__control lurking" type="email" placeholder="E-mail" data-input="shadowing-2" data="may-change">
+                <input class="form-mess__control lurking" type="email" placeholder="E-mail" data-input="shadowing-2" data-checkbox="may-change">
                 </label>
                 <label class="form-mess__group form-mess__group--textarea">
                   <textarea class="form-mess__control" placeholder="Сообщение" rows="4"></textarea>
@@ -308,7 +321,7 @@
       </div>
     </div>
   </main>
-	<footer class="page-footer">
+  <footer class="page-footer">
     <div class="page-footer__container">
       <div class="page-footer__row">
         <div class="page-footer__column">

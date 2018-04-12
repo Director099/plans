@@ -1,6 +1,7 @@
 .callback {
-  background: #fafafa url("img/footer-bg-mb.jpg") no-repeat left bottom;
-  // .padding-ident();
+  background-image: url("img/footer-bg-mb.jpg")  ;
+  background-repeat: no-repeat;
+  background-position: left bottom;
   overflow: hidden;
   padding-bottom: 75px;
   padding-top: 50px;
@@ -27,14 +28,14 @@
   }
 
   @media(min-width: @screen-md) {
-    background: #fafafa url("img/footer-bg-tb.jpg") no-repeat bottom;
+    background-image: url("img/footer-bg-tb.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 
   @media(min-width: @screen-lg) {
     background-image: url("img/footer-bg.jpg");
-    // background-attachment: fixed;
     background-size: cover;
-    background-color: #fafafa;
     background-position: center;
     background-repeat: no-repeat;
   }

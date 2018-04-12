@@ -1,7 +1,4 @@
 .worker {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
   position: relative;
   max-width: 320px;
   height: 370px;
@@ -145,7 +142,11 @@
   @media(min-width: @screen-md) {
     max-width: 600px;
     height: 370px;
-    margin: 0 auto;
+    margin: 30px auto 0;
+  }
+
+  @media(min-width: @screen-lg) {
+    margin-top: 0;
   }
 
   @media(min-width: @screen-xl) {
