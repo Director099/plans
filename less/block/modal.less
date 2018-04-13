@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  top: 0;
+  top: 50%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -10,16 +10,17 @@
   outline: 0;
   opacity: 0;
   transition: opacity .15s linear;
+  transform: translateY(-50%);
 
   .modal-dialog {
     position: relative;
     max-width: 325px;
-    margin: 1.175rem auto 20px;
+    margin: 20px auto 20px;
     padding: 35px;
     background: @white;
     border-radius: @border-radius;
     box-shadow: 0 0 10px 1px rgba(0,0,0,.5);
-    transform: translate(0,-25%);
+    // transform: translate(0,-25%);
     transition: transform .3s ease-out,-webkit-transform .3s ease-out;
 
     &__close {
