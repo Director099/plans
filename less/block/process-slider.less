@@ -1,5 +1,6 @@
 .process-slider {
   position: relative;
+  .container__slider();
 
   .owl-nav {
     display: flex;
@@ -12,11 +13,9 @@
     .owl-next {
       position: relative;
       width: 40px;
-      // height: 40px;
       background: transparent;
       font-size: 0;
       border-radius: 0;
-      // box-shadow: 0 0 1px 1px fade(@black, 20%);
       transition: @transition-time;
 
       &::after {
@@ -68,7 +67,7 @@
     @media(min-width: @screen-lg) {
       position: absolute;
       bottom: 22px;
-      left: 0;
+      left: 35px;
       margin-top: 0px
     }
   }
@@ -118,7 +117,7 @@
 
     @media(min-width: @screen-lg) {
       position: absolute;
-      left: 60px;
+      left: 95px;
       bottom: 45px;
     }
   }

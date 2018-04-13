@@ -755,6 +755,7 @@ textarea {
   background-size: 20px;
   border: none;
   overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(255, 66, 2, 0.5), 0px 0px 10px rgba(255, 66, 2, 0.5);
 }
 .btn--pp:hover {
   box-shadow: 0 0 17px 2px rgba(255, 68, 18, 0.85);
@@ -850,9 +851,12 @@ textarea {
   letter-spacing: 1px;
   font-weight: 300;
 }
-.bg-even:nth-child(even) .btn {
-  background: #ff4412;
+.bg-even:nth-child(even) .form-call__block .btn {
+  background: transparent;
   color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 11px 15px;
+  box-shadow: none;
 }
 .bg-even:nth-child(even) .form-call__checkbox label::after,
 .bg-even:nth-child(even) .form-call__checkbox label::before,
@@ -1638,10 +1642,7 @@ textarea {
   text-decoration: underline;
 }
 .clients {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-bottom: 45px;
+  padding-bottom: 70px;
   padding-top: 45px;
   overflow: hidden;
 }
@@ -1753,7 +1754,7 @@ textarea {
   margin-left: auto;
 }
 .partners {
-  padding-top: 0px;
+  padding-top: 30px;
   padding-bottom: 40px;
 }
 .partners__item {
@@ -1962,7 +1963,7 @@ textarea {
 }
 .btn-group__link {
   display: inline-block;
-  color: #ffffff;
+  color: #999;
   font-size: 12px;
   margin-right: 5px;
 }
@@ -2473,6 +2474,7 @@ textarea {
   letter-spacing: 2px;
   padding: 13px 25px;
   margin-left: 15px;
+  box-shadow: 0px 0px 10px rgba(255, 66, 2, 0.5), 0px 0px 10px rgba(255, 66, 2, 0.5);
 }
 .works .btn:hover {
   box-shadow: 0 0 17px 2px rgba(255, 68, 18, 0.85);
@@ -2566,7 +2568,7 @@ textarea {
 }
 .modal {
   position: fixed;
-  top: 0;
+  top: 50%;
   right: 0;
   bottom: 0;
   left: 0;
@@ -2576,16 +2578,16 @@ textarea {
   outline: 0;
   opacity: 0;
   transition: opacity .15s linear;
+  transform: translateY(-50%);
 }
 .modal .modal-dialog {
   position: relative;
   max-width: 325px;
-  margin: 1.175rem auto 20px;
+  margin: 20px auto 20px;
   padding: 35px;
   background: #ffffff;
   border-radius: 3px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
-  transform: translate(0, -25%);
   transition: transform 0.3s ease-out;
 }
 .modal .modal-dialog__close {
@@ -2870,6 +2872,14 @@ textarea {
   padding-top: 75px;
 }
 .process__container {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.process__container-text {
   display: block;
   width: 100%;
   margin-left: auto;
@@ -3230,6 +3240,12 @@ textarea {
 }
 .process-slider {
   position: relative;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .process-slider .owl-nav {
   display: flex;
@@ -3384,6 +3400,12 @@ textarea {
   .callback__row {
     flex-direction: row;
   }
+  .callback {
+    background-image: url("img/footer-bg-tb.jpg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-position: bottom;
+  }
   .form-mess__group {
     display: block;
     flex: 0 0 50%;
@@ -3530,6 +3552,9 @@ textarea {
   .process__container {
     max-width: 100%;
   }
+  .process__container-text {
+    max-width: 100%;
+  }
   .design__container {
     max-width: 100%;
   }
@@ -3571,6 +3596,9 @@ textarea {
     max-width: 50%;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .process-slider {
+    max-width: 100%;
   }
 }
 @media (min-width: 480px) and (max-width: 991px) {
@@ -3646,11 +3674,6 @@ textarea {
   }
   .callback__container {
     max-width: 100%;
-  }
-  .callback {
-    background-image: url("img/footer-bg-tb.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
   }
   .form-mess__group--textarea {
     margin-bottom: 30px;
@@ -3893,6 +3916,9 @@ textarea {
     font: 900 27px/37px "Proxima Nova", "Arial", sans-serif;
   }
   .process__container {
+    max-width: 100%;
+  }
+  .process__container-text {
     max-width: 100%;
   }
   .design__container {
@@ -4179,6 +4205,9 @@ textarea {
   .process__container {
     max-width: 962px;
   }
+  .process__container-text {
+    max-width: 962px;
+  }
   .process__column {
     display: block;
     flex: 0 0 75%;
@@ -4209,15 +4238,18 @@ textarea {
     margin-left: initial;
     transform: translateX(-20px);
   }
+  .process-slider {
+    max-width: 1027px;
+  }
   .process-slider .owl-nav {
     position: absolute;
     bottom: 22px;
-    left: 0;
+    left: 35px;
     margin-top: 0px;
   }
   .process-slider .owl-dots {
     position: absolute;
-    left: 60px;
+    left: 95px;
     bottom: 45px;
   }
 }
@@ -4300,10 +4332,16 @@ textarea {
   .process__container {
     max-width: 1180px;
   }
+  .process__container-text {
+    max-width: 1180px;
+  }
   .design__container {
     max-width: 1180px;
   }
   .questions__container {
     max-width: 1180px;
+  }
+  .process-slider {
+    max-width: 1245px;
   }
 }

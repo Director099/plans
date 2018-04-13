@@ -6,10 +6,12 @@ $('.partners').owlCarousel({
   dots: false,
   responsive: {
     0: {
+      items: 1
+    },
+    465: {
       items: 2
     },
     768: {
-      mouseDrag: false,
       items: 4,
       loop: false
     }
@@ -141,21 +143,22 @@ $('.process-slider').owlCarousel({
     items: 1,
 
     onInitialized: function() {
-      var dot = document.querySelectorAll('.process-slider .owl-dot');
-      var maxDot = Math.max(dot.length);
+      var itemsSlider = document.querySelectorAll('.process-slider');
 
-      for (var i = 0; i < dot.length; i++) {
-        dot[i].innerHTML = '<b>' + '0' + (1 + i)  + '</b>' + '<span class="max-number"> / ' + '0' + maxDot + ' </span>';
+
+      function amountDots(dot) {
+        var maxDot = Math.max(dot.length);
+        for (var i = 0; i < dot.length; i++) {
+          dot[i].innerHTML = '<b>' + '0' + (1 + i)  + '</b>' + '<span class="max-number"> / ' + '0' + maxDot + ' </span>';
+        }
       }
+
+      itemsSlider.forEach(function(i) {
+        var dot = i.querySelectorAll('.owl-dot')
+        amountDots(dot)
+      })
     }
 })
-
-$(".navigation__item > a").click(function () {
-  var elementClick = $(this).attr("href")
-  var destination = $(elementClick).offset().top;
-  jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-  return false;
-});
 
 $(function () {
     $.scrollUp({
@@ -166,7 +169,6 @@ $(function () {
 $('#phone').mask('0 (000) 000 - 00 - 00');
 
 (function(){
-
   window.onload = function() {
     var preloader = document.querySelector('#preloader');
 
@@ -184,7 +186,7 @@ $('#phone').mask('0 (000) 000 - 00 - 00');
 
 (function(){
 
-  var nav = $(".navigation__item > a");
+  var nav = $(".navigation__item .scroll");
   var linkDown = $("#link-down");
 
   function scroll(i) {
@@ -198,7 +200,6 @@ $('#phone').mask('0 (000) 000 - 00 - 00');
 
   scroll(linkDown);
   scroll(nav);
-
 })();
 
 (function(){
