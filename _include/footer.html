@@ -90,6 +90,33 @@
       </div>
     </div>
 	</footer>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <section class="modal-dialog__content">
+        <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-dialog__title" id="exampleModalLabel">Введите номер телефона:</h5>
+        <p class="modal-dialog__text">Среднее время ответа 5-10 мин.</p>
+        <form class="modal-form" action="#">
+          <input class="modal-form__control" type="text" placeholder="Телефон или E-mail">
+          <button class="btn btn--pp">обсудить проект</button>
+          <div class="modal-form__checkbox">
+            <input type="checkbox" id="modal-ch" checked required>
+            <label for="modal-ch">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" data-video="https://youtube.com/embed/m-KBu9AN4JI" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog--rev" role="document">
+      <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <iframe width="100%" height="300" allowfullscreen></iframe>
+    </div>
+  </div>
 	<script src="js/script.js"></script>
 </body>
 </html>

@@ -27,93 +27,70 @@
       <path d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zM129.921 28.251c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z" />
     </symbol>
   </svg>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <section class="modal-dialog__content">
-        <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h5 class="modal-dialog__title" id="exampleModalLabel">Введите номер телефона:</h5>
-        <p class="modal-dialog__text">Среднее время ответа 5-10 мин.</p>
-        <form class="modal-form" action="#">
-          <input class="modal-form__control" type="text" placeholder="Телефон или E-mail">
-          <button class="btn btn--pp">обсудить проект</button>
-          <div class="modal-form__checkbox">
-            <input type="checkbox" id="modal-ch" checked required>
-            <label for="modal-ch">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
-          </div>
-        </form>
-      </section>
-    </div>
-  </div>
-  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" data-video="https://youtube.com/embed/m-KBu9AN4JI" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog--rev" role="document">
-      <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <iframe width="100%" height="300" allowfullscreen></iframe>
-    </div>
-  </div>
   <div class="fullpage">
   	<header class="page-header">
       <a class="logo" href="index.html">
         <img src="img/ppwhite.svg" width="180" height="48" alt="Логотип">
       </a>
-      <button class="toggle" id="nav-burger">
-        <span class="toggle__span">Переключатель</span>
-      </button>
+      <div class="page-header__right-block">
+        <ul class="connect">
+          <li class="connect__item">
+            <a href="tel:+79374709000">+7 (937) 470 90 00</a>
+          </li>
+          <li class="connect__item connect__item--mail">
+            <a href="mailto:info@pplans.ru">info@pplans.ru </a>
+          </li>
+        </ul>
+        <button class="toggle" id="nav-burger">
+          <span class="toggle__span">Переключатель</span>
+        </button>
+      </div>
       <nav class="menu-navigation" id="nav">
-        <ul class="navigation">
-          <li class="navigation__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="scroll">Кейсы</a>
-          </li>
-          <li class="navigation__item">
-            <a class="scroll">Услуги</a>
-          </li>
-          <li class="navigation__item">
-            <a class="scroll">Контакты</a>
-          </li>
-        </ul>
-        <ul class="contact-menu">
-          <li class="contact-menu__item">
-            <span class="contact-menu__link">Уфа, Ленина 70</span>
-          </li>
-          <li class="contact-menu__item">
-            <a class="contact-menu__link" href="tel:+79374700900">+7 (937) 470-09-00</a>
-          </li>
-          <li class="contact-menu__item">
-            <a class="contact-menu__link" href="mailto:info@pplans.ru">info@pplans.ru</a>
-          </li>
-        </ul>
-        <p class="social-menu">
-          <a class="social-menu__link" href="https://www.facebook.com/People-Plans-2053189688271847/">
-            <svg class="icon" width="15" height="15">
-              <use xlink:href="#facebook"/>
-            </svg>facebook
-          </a>
-          <a class="social-menu__link" href="https://www.instagram.com/peopleplans/">
-            <svg class="icon" width="15" height="15">
-              <use xlink:href="#im"/>
-            </svg>instagram
-          </a>
-          <a class="social-menu__link" href="https://vk.com/pplans">
-            <svg class="icon" width="15" height="15">
-              <use xlink:href="#vk"/>
-            </svg>vk
-          </a>
-        </p>
+        <div class="menu-navigation__container">
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="scroll">Кейсы</a>
+            </li>
+            <li class="navigation__item">
+              <a class="scroll">Услуги</a>
+            </li>
+            <li class="navigation__item">
+              <a class="scroll">Контакты</a>
+            </li>
+          </ul>
+          <ul class="contact-menu">
+            <li class="contact-menu__item">
+              <span class="contact-menu__link">Уфа, Ленина 70</span>
+            </li>
+            <li class="contact-menu__item">
+              <a class="contact-menu__link" href="tel:+79374700900">+7 (937) 470-09-00</a>
+            </li>
+            <li class="contact-menu__item">
+              <a class="contact-menu__link" href="mailto:info@pplans.ru">info@pplans.ru</a>
+            </li>
+          </ul>
+          <p class="social-menu">
+            <a class="social-menu__link" href="https://www.facebook.com/People-Plans-2053189688271847/">
+              <svg class="icon" width="15" height="15">
+                <use xlink:href="#facebook"/>
+              </svg>facebook
+            </a>
+            <a class="social-menu__link" href="https://www.instagram.com/peopleplans/">
+              <svg class="icon" width="15" height="15">
+                <use xlink:href="#im"/>
+              </svg>instagram
+            </a>
+            <a class="social-menu__link" href="https://vk.com/pplans">
+              <svg class="icon" width="15" height="15">
+                <use xlink:href="#vk"/>
+              </svg>vk
+            </a>
+          </p>
+        </div>
       </nav>
-      <ul class="connect">
-        <li class="connect__item">
-          <a href="tel:+79374709000">+7 (937) 470 90 00</a>
-        </li>
-        <li class="connect__item connect__item--mail">
-          <a href="mailto:info@pplans.ru">info@pplans.ru </a>
-        </li>
-      </ul>
   	</header>
     <div class="main-block">
       <div class="main-block__row">
@@ -170,9 +147,9 @@
       <span>Поехали</span>
     </a>
   </div>
-  <main>
+  <main id="review">
 
-  <div class="bg-even task" id="review">
+  <div class="bg-even task">
     <div class="task__container">
       <div class="single-title">
         <section class="single-title__column">
@@ -338,6 +315,33 @@
       </div>
     </div>
 	</footer>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <section class="modal-dialog__content">
+        <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-dialog__title" id="exampleModalLabel">Введите номер телефона:</h5>
+        <p class="modal-dialog__text">Среднее время ответа 5-10 мин.</p>
+        <form class="modal-form" action="#">
+          <input class="modal-form__control" type="text" placeholder="Телефон или E-mail">
+          <button class="btn btn--pp">обсудить проект</button>
+          <div class="modal-form__checkbox">
+            <input type="checkbox" id="modal-ch" checked required>
+            <label for="modal-ch">Я даю свое <a href="#">согласие на обработку персональных данных</a></label>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-review" tabindex="-1" role="dialog" data-video="https://youtube.com/embed/m-KBu9AN4JI" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog--rev" role="document">
+      <button type="button" class="modal-dialog__close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <iframe width="100%" height="300" allowfullscreen></iframe>
+    </div>
+  </div>
 	<script src="js/script.js"></script>
 </body>
 </html>

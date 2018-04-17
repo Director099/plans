@@ -563,3 +563,14 @@ $('.modal').on('hide.bs.modal', function(){
   var $iframe = $('iframe', this);
   $iframe.attr('src', null);
 });
+
+(function() {
+  if (window.innerWidth <= 480) {
+    var works = document.querySelectorAll('.works');
+    works.forEach(function(i) {
+      i.querySelector('.works__column.works__column--4').addEventListener('click', function(evt) {
+        i.classList.toggle('open-job');
+      })
+    })
+  }
+})();
