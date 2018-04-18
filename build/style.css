@@ -1029,7 +1029,6 @@ textarea {
 .form-send__text {
   display: block;
   color: #929292;
-  margin-left: 10px;
   margin-bottom: 10px;
   font-size: 9px;
   text-align: center;
@@ -3409,6 +3408,7 @@ textarea {
   }
   .form-send__text {
     text-align: left;
+    margin-left: 10px;
   }
   .form-send__checkbox label {
     margin-left: 0px;
