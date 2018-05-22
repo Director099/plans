@@ -75,8 +75,8 @@
 
     &--rev {
       position: absolute;
-      left: 0;
-      right: 0;
+      left: 15px;
+      right: 15px;
       bottom: 0;
       top: 0;
       margin: auto;
@@ -103,6 +103,26 @@
         font-size: 17px;
         color: @white;
         background: @color-pp;
+
+        span {
+          font-size: 0;
+        }
+
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 2px;
+          height: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          background: @white;
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
       }
     }
   }

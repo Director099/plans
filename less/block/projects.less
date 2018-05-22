@@ -1,9 +1,8 @@
 .projects {
-  // background-image: url("img/bg-pattern.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   .padding-ident();
 
   &__container {
@@ -24,16 +23,19 @@
     @media(min-width: @screen-md) {
       display: flex;
       flex-wrap: wrap;
-      // justify-content: space-around;
-      // max-width: 650px;
       list-style-type: none;
-      // margin: 0 auto;
       padding: 0;
+    }
+
+    @media(min-width: @screen-lg) {
+      margin-top: 30px;
+      margin-bottom: -5px;
+      max-width: 65%;
     }
   }
 
   &__item {
-    margin-right: 10px;
+    margin-right: 5px;
     margin-bottom: 5px;
 
     a {

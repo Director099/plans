@@ -84,6 +84,7 @@ gulp.task('js', function() {
     // 'node_modules/jquery-parallax.js/parallax.min.js',
     'node_modules/owl.carousel/dist/owl.carousel.min.js',
     // 'node_modules/bootstrap/js/dist/modal.js',
+    'js/video.js',
     'js/custom.js'
     ])
   .pipe(plumber())
